@@ -1,5 +1,7 @@
 {
   "name": "vite-project",
+  "description": "Github pages of Jurre Roeleveld",
+  "source": "src/index.html",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +13,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.155.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
