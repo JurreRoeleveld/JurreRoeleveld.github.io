@@ -26,6 +26,9 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg';
 import bottle1 from './bottle1.png';
 import bottle2 from './bottle2.png';
 import bottle3 from './bottle3.png';
+import bottle10 from './bottle10.png';
+import bottle20 from './bottle20.png';
+import bottle30 from './bottle30.png';
 
 export {
   bigShoe1,
@@ -48,5 +51,8 @@ export {
   wijngaard,
   bottle1,
   bottle2,
-  bottle3
+  bottle3,
+  bottle10,
+  bottle20,
+  bottle30
 };

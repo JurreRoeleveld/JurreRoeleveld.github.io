@@ -14,6 +14,9 @@ import {
   bottle1,
   bottle2,
   bottle3,
+  bottle10,
+  bottle20,
+  bottle30,
   customer1,
   customer2,
   shoe4,
@@ -35,16 +38,16 @@ export const navLinks = [
 
 export const shoes = [
   {
-    thumbnail: thumbnailShoe1,
-    bigShoe: bigShoe1
+    thumbnail: bottle10,
+    bigShoe: bottle10
   },
   {
-    thumbnail: thumbnailShoe2,
-    bigShoe: bigShoe2
+    thumbnail: bottle20,
+    bigShoe: bottle20
   },
   {
-    thumbnail: thumbnailShoe3,
-    bigShoe: bigShoe3
+    thumbnail: bottle30,
+    bigShoe: bottle30
   }
 ];
 

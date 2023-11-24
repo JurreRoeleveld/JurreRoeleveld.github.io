@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { shoes } from '../constants';
 import { Button, ShoeCard } from '../components';
-import { bigShoe1, } from '../assets/images';
+import { bigShoe1, bottle10 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {
-  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+  const [bigShoeImg, setBigShoeImg] = useState(bottle10);
 
   return (
     <section
@@ -19,7 +19,7 @@ const Hero = () => {
         </p>
         <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
-            Wijnen waar je van gaat
+            Wijnen om van te
           </span>
           <br />
           <span className="text-deep-green inline-block mt-3">dansen!</span>
@@ -27,16 +27,14 @@ const Hero = () => {
 
         {/* //todo add link to shop */}
         <Button label="Shop now" iconURL={arrowRight} />
-
-
       </div>
 
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img
           src={bigShoeImg}
           alt="shoe colletion"
-          width={610}
-          height={502}
+          width={100}
+          height={200}
           className="object-contain relative z-10"
         />
 
