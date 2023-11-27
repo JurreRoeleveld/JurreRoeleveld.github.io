@@ -34,6 +34,8 @@ import box1 from './box1.png';
 import box2 from './box2.png';
 import box3 from './box3.png';
 
+import nix18 from './nix-18.svg';
+
 export {
   bigShoe1,
   bigShoe2,
@@ -61,5 +63,6 @@ export {
   bottle30,
   box1,
   box2,
-  box3
+  box3,
+  nix18
 };

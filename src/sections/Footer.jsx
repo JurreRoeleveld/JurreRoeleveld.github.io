@@ -1,4 +1,5 @@
 import { footerLinks } from '../constants';
+import { nix18 } from '../assets/images';
 
 const Footer = () => {
   return (
@@ -6,15 +7,18 @@ const Footer = () => {
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
           <a href="/">
-            <p className="text-xl font-montserrat text-main-color">
+            <p className="text-xl font-montserrat text-deep-green">
               Dansende wijnen
             </p>
           </a>
 
-          {/* <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
-            Voor vragen zijn wij bereikbaar via deze kanalen.
-          </p> */}
-
+          <img
+            src={nix18}
+            alt="nix18"
+            width={80}
+            height={80}
+            className="mt-2"
+          />
           {/* <div className='flex items-center gap-5 mt-8'>
             {socialMedia.map((icon) => (
               <div
@@ -26,7 +30,6 @@ const Footer = () => {
             ))}
           </div> */}
         </div>
-
         <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
           {footerLinks.map(section => (
             <div key={section.title}>
