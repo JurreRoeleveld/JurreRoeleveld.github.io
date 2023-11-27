@@ -12,6 +12,8 @@ import truckFast from './truck-fast.svg';
 import twitter from './twitter.svg';
 import wineIcon from './wine-icon.svg';
 import wineBottle from './wine-bottle.svg';
+import expandUp from './expand-up.svg';
+import expandDown from './expand-down.svg';
 
 export {
   arrowRight,
@@ -27,5 +29,7 @@ export {
   truckFast,
   twitter,
   wineIcon,
-  wineBottle
+  wineBottle,
+  expandUp,
+  expandDown
 };
