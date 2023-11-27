@@ -1,7 +1,7 @@
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
+const Card = ({ imgURL, changeBigShoeImage: changeHeroImage, bigShoeImg }) => {
   const handleClick = () => {
     if (bigShoeImg !== imgURL.bigShoe) {
-      changeBigShoeImage(imgURL.bigShoe);
+      changeHeroImage(imgURL.bigShoe);
     }
   };
 
@@ -9,7 +9,7 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
     <div
       className={`border-2 rounded-xl ${
         bigShoeImg === imgURL.bigShoe
-          ? 'border-deep-green'
+          ? 'border-main-color'
           : 'border-transparent'
       } cursor-pointer max-sm:flex-1`}
       onClick={handleClick}
@@ -27,4 +27,4 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
   );
 };
 
-export default ShoeCard;
+export default Card;

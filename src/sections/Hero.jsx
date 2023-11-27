@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { shoes } from '../constants';
 import { Button, ShoeCard } from '../components';
-import { box1, bottle10 } from '../assets/images';
+import { box1 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {
@@ -14,15 +14,14 @@ const Hero = () => {
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
-        {/* <p className="text-xl font-montserrat text-deep-green">
+        {/* <p className="text-xl font-montserrat text-main-color">
           Dansende wijnen
         </p> */}
-        <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+        <h1 className="mt-10 font-palanquin text-6xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+          <span className="xl:whitespace-wrap relative z-10 pr-5">
             Wijnen om van te
           </span>
-          <br />
-          <span className="text-deep-green inline-block mt-3">dansen!</span>
+          <span className="text-main-color inline-block mt-3">dansen!</span>
         </h1>
 
         {/* //todo add link to shop */}
@@ -33,7 +32,7 @@ const Hero = () => {
         <img
           src={bigShoeImg}
           alt="shoe colletion"
-          width={610}
+          width={600}
           height={500}
           className="object-contain relative z-10"
         />

@@ -6,7 +6,7 @@ const CustomerReviews = () => {
     <section className='max-container' id="reviews">
       <h3 className='font-palanquin text-center text-4xl font-bold'>
         Wat zeggen onze 
-        <span className='text-deep-green'> klanten </span>
+        <span className='text-main-color'> klanten </span>
         ?
       </h3>
       <p className='m-auto mt-4 max-w-lg  text-center info-text'>

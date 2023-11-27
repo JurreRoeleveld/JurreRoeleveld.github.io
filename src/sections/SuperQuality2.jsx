@@ -1,5 +1,4 @@
 import { bottle10 } from '../assets/images';
-import { Button } from '../components';
 
 const SuperQuality2 = () => {
   return (
@@ -18,8 +17,8 @@ const SuperQuality2 = () => {
       </div>
 
       <div className="flex flex-1 flex-col">
-        <h2 className="font-palanquin capitalize text-4xl lg:max-w-lg font-bold">
-          <span className="text-deep-green"> Wat zijn natuurwijnen? </span>
+        <h2 className="font-palanquin text-4xl lg:max-w-lg font-bold">
+         <span className="text-main-color">Wat zijn natuurwijnen? </span>
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
           Natuurwijnen, een levendige uitdrukking van de aarde zelf, vangen de

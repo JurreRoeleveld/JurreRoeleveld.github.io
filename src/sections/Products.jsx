@@ -6,7 +6,7 @@ const PopularProducts = () => {
     <section id="products" className="max-container max-sm:mt-12">
       <div className="flex flex-col justify-start gap-5">
         <h2 className="text-4xl font-palanquin font-bold">
-          Onze <span className="text-deep-green"> wijn </span> boxen
+          Onze <span className="text-main-color"> wijn </span> boxen
         </h2>
         <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray">
           In de boxen zit een verschillend aantal wijnen.

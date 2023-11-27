@@ -87,13 +87,13 @@ export const services = [
   },
   {
     imgURL: shieldTick,
-    label: 'Veilige betaling',
+    label: 'Betaling met betaalverzoek',
     subtext:
       'Zodra je bestelling ontvangen is ontvang je een mail met daarin bevestiging en een betaalverzoek.'
   },
   {
     imgURL: support,
-    label: 'Helpen graag!',
+    label: 'We helpen graag!',
     subtext:
       'Als je twijfelt over welke box het beste pas bij je gerecht denken we graag mee.'
   }

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
           <a href="/">
-            <p className="text-xl font-montserrat text-deep-green">
+            <p className="text-xl font-montserrat text-main-color">
               Dansende wijnen
             </p>
           </a>

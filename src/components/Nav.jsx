@@ -6,7 +6,7 @@ const Nav = () => {
     <header className="padding-x py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
-          <p className="text-xl font-montserrat text-deep-green">
+          <p className="text-xl font-montserrat text-main-color">
             Dansende wijnen
           </p>
         </a>
