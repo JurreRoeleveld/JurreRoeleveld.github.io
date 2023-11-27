@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Nav } from './components';
 import {
   CustomerReviews,
@@ -7,18 +8,23 @@ import {
   Services,
   Subscribe,
   SuperQuality,
-  SuperQuality2
+  SuperQuality2,
+  Modal
 } from './sections';
 
+
 const App = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <main className="relative">
+      <Modal showModal={showModal} setShowModal={setShowModal} />
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
       <section className="padding">
-        <PopularProducts />
+        <PopularProducts setShowModal={setShowModal} />
       </section>
       <section className="padding">
         <SuperQuality />

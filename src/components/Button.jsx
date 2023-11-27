@@ -5,10 +5,13 @@ const Button = ({
   textColor,
   borderColor,
   fullWidth,
+  onClick,
   scrollTarget
+  
 }) => {
   return (
     <button
+      onClick={onClick}
       className={`flex my-2 justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
       ${
         backgroundColor
