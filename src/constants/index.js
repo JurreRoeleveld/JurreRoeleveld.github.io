@@ -8,9 +8,6 @@ import {
 } from '../assets/icons';
 
 import {
-  bigShoe1,
-  bigShoe2,
-  bigShoe3,
   bottle1,
   bottle2,
   bottle3,
@@ -19,35 +16,31 @@ import {
   bottle30,
   customer1,
   customer2,
-  shoe4,
-  shoe5,
-  shoe6,
-  shoe7,
-  thumbnailShoe1,
-  thumbnailShoe2,
-  thumbnailShoe3
+  box1,
+  box2,
+  box3
 } from '../assets/images';
 
 export const navLinks = [
-  { href: '#home', label: 'Home' },
   { href: '#products', label: 'Producten' },
   { href: '#de-wijnen', label: 'De wijnen' },
   { href: '#natuurwijn', label: 'Natuurwijn' },
-  { href: '#contact-us', label: 'Contact Us' }
+  { href: '#reviews', label: 'Reviews' },
+  { href: '#contact-us', label: 'Contact' }
 ];
 
 export const shoes = [
   {
-    thumbnail: bottle10,
-    bigShoe: bottle10
+    thumbnail: box1,
+    bigShoe: box1
   },
   {
-    thumbnail: bottle20,
-    bigShoe: bottle20
+    thumbnail: box2,
+    bigShoe: box2
   },
   {
-    thumbnail: bottle30,
-    bigShoe: bottle30
+    thumbnail: box3,
+    bigShoe: box3
   }
 ];
 
@@ -108,7 +101,7 @@ export const services = [
 
 export const footerLinks = [
   {
-    title: 'Products',
+    title: 'Producten',
     links: [
       { name: 'Box 1', href: '#products' },
       { name: 'Box 2', href: '#products' },
@@ -116,9 +109,9 @@ export const footerLinks = [
     ]
   },
   {
-    title: 'Help',
+    title: 'Navigatie',
     links: [
-      { name: 'Over ons', href: '#products' },
+      { name: 'Producten', href: '#products' },
       { name: 'De wijnen', href: '#de-wijnen' },
       { name: 'Natuurwijnen', href: '#natuurwijn' }
     ]

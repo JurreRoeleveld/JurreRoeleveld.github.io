@@ -11,9 +11,9 @@ const Footer = () => {
             </p>
           </a>
 
-          <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
+          {/* <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
             Voor vragen zijn wij bereikbaar via deze kanalen.
-          </p>
+          </p> */}
 
           {/* <div className='flex items-center gap-5 mt-8'>
             {socialMedia.map((icon) => (

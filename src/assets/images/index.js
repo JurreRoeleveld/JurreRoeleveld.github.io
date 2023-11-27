@@ -30,6 +30,10 @@ import bottle10 from './bottle10.png';
 import bottle20 from './bottle20.png';
 import bottle30 from './bottle30.png';
 
+import box1 from './box1.png';
+import box2 from './box2.png';
+import box3 from './box3.png';
+
 export {
   bigShoe1,
   bigShoe2,
@@ -54,5 +58,8 @@ export {
   bottle3,
   bottle10,
   bottle20,
-  bottle30
+  bottle30,
+  box1,
+  box2,
+  box3
 };

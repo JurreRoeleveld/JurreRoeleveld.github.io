@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { shoes } from '../constants';
 import { Button, ShoeCard } from '../components';
-import { bigShoe1, bottle10 } from '../assets/images';
+import { box1, bottle10 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {
-  const [bigShoeImg, setBigShoeImg] = useState(bottle10);
+  const [bigShoeImg, setBigShoeImg] = useState(box1);
 
   return (
     <section
@@ -14,9 +14,9 @@ const Hero = () => {
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
-        <p className="text-xl font-montserrat text-deep-green">
+        {/* <p className="text-xl font-montserrat text-deep-green">
           Dansende wijnen
-        </p>
+        </p> */}
         <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
             Wijnen om van te
@@ -33,8 +33,8 @@ const Hero = () => {
         <img
           src={bigShoeImg}
           alt="shoe colletion"
-          width={100}
-          height={200}
+          width={610}
+          height={500}
           className="object-contain relative z-10"
         />
 

@@ -5,7 +5,6 @@ import {
   Hero,
   PopularProducts,
   Services,
-  SpecialOffer,
   Subscribe,
   SuperQuality,
   SuperQuality2
@@ -30,9 +29,9 @@ const App = () => {
       <section className="padding">
         <SuperQuality2 />
       </section>
-      <section className="padding">
+      {/* <section className="padding">
         <SpecialOffer />
-      </section>
+      </section> */}
       <section className="bg-pale-blue padding">
         <CustomerReviews />
       </section>

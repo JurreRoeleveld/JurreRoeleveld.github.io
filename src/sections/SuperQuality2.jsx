@@ -1,4 +1,4 @@
-import { shoe8 } from '../assets/images';
+import { bottle10 } from '../assets/images';
 import { Button } from '../components';
 
 const SuperQuality2 = () => {
@@ -7,18 +7,15 @@ const SuperQuality2 = () => {
       id="natuurwijn"
       className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container"
     >
-
-
       <div className="flex-1 flex justify-center items-center">
         <img
-          src={shoe8}
+          src={bottle10}
           alt="product detail"
-          width={570}
-          height={522}
+          width={180}
+          height={180}
           className="object-contain"
         />
       </div>
-
 
       <div className="flex flex-1 flex-col">
         <h2 className="font-palanquin capitalize text-4xl lg:max-w-lg font-bold">

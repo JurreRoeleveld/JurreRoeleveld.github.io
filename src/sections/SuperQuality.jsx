@@ -1,4 +1,4 @@
-import { shoe8 } from '../assets/images';
+import { bottle20 } from '../assets/images';
 import { Button } from '../components';
 
 const SuperQuality = () => {
@@ -34,15 +34,14 @@ const SuperQuality = () => {
           een verhaal vertelt dat het proeven waard is.
         </p>
         <p className="mt-6 lg:max-w-lg info-text"></p>
-
       </div>
 
       <div className="flex-1 flex justify-center items-center">
         <img
-          src={shoe8}
+          src={bottle20}
           alt="product detail"
-          width={570}
-          height={522}
+          width={180}
+          height={180}
           className="object-contain"
         />
       </div>
