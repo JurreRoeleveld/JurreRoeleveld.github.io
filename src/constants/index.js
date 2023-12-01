@@ -90,7 +90,7 @@ export const services = [
     imgURL: shieldTick,
     label: 'Betaling met betaalverzoek',
     subtext:
-      'Zodra je bestelling ontvangen is ontvang je een mail met daarin bevestiging en een betaalverzoek.'
+      'Zodra je bestelling ontvangen is krijg je een mail met daarin bevestiging en een betaalverzoek.'
   },
   {
     imgURL: support,
