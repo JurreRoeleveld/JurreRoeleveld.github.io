@@ -11,11 +11,8 @@ import {
   bottle1,
   bottle2,
   bottle3,
-  bottle10,
-  bottle20,
-  bottle30,
-  customer1,
-  customer2,
+  rori,
+  jesper,
   box1,
   box2,
   box3
@@ -29,18 +26,18 @@ export const navLinks = [
   { href: '#contact-us', label: 'Contact' }
 ];
 
-export const shoes = [
+export const heros = [
   {
     thumbnail: box1,
-    bigShoe: box1
+    bigHero: box1
   },
   {
     thumbnail: box2,
-    bigShoe: box2
+    bigHero: box2
   },
   {
     thumbnail: box3,
-    bigShoe: box3
+    bigHero: box3
   }
 ];
 
@@ -48,34 +45,38 @@ export const products = [
   {
     imgURL: bottle1,
     name: 'box1',
-    price: '$114.00'
+    price: '$114.00',
+    productInfo:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.'
   },
   {
     imgURL: bottle2,
     name: 'box2',
-    price: '$114.00'
+    price: '$114.00',
+    productInfo:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.'
   },
   {
     imgURL: bottle3,
     name: 'box3',
-    price: '$114.00'
+    price: '$114.00',
+    productInfo:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.'
   }
 ];
 
 export const reviews = [
   {
-    imgURL: customer1,
-    customerName: 'Morich Brown',
-    rating: 4.5,
-    feedback:
-      'The attention to detail and the quality of the product exceeded my expectations. Highly recommended!'
+    imgURL: jesper,
+    customerName: 'Jesper Bosma',
+    rating: 5,
+    feedback: 'Wat een exquise boxen, kan het zeer aanraden!'
   },
   {
-    imgURL: customer2,
-    customerName: 'Lota Mongeskar',
-    rating: 4.5,
-    feedback:
-      "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
+    imgURL: rori,
+    customerName: 'Rori Wijnhorst',
+    rating: 5,
+    feedback: 'Wat een feestje die wijnen, kon er erg goed op dansen!'
   }
 ];
 
@@ -95,7 +96,7 @@ export const services = [
     imgURL: support,
     label: 'We helpen graag!',
     subtext:
-      'Als je twijfelt over welke box het beste pas bij je gerecht denken we graag mee.'
+      'Als je twijfelt over welke box het beste pas bij je diner denken we graag mee.'
   }
 ];
 

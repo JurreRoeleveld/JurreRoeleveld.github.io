@@ -8,7 +8,7 @@ import ReviewCard from './ReviewCard';
 export {
   Button,
   Nav,
-  Card as ShoeCard,
+  Card,
   PopularProductCard,
   ServiceCard,
   ReviewCard

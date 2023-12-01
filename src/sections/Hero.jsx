@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import { shoes } from '../constants';
-import { Button, ShoeCard } from '../components';
+import { heros } from '../constants';
+import { Button, Card } from '../components';
 import { box1 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {
-  const [bigShoeImg, setBigShoeImg] = useState(box1);
+  const [bigHeroImg, setBigHeroImg] = useState(box1);
 
   return (
     <section
@@ -24,13 +24,12 @@ const Hero = () => {
           <span className="text-main-color inline-block mt-3">dansen!</span>
         </h1>
 
-        {/* //todo add link to shop */}
-        <Button label="Shop now" iconURL={arrowRight} />
+        <Button label="De boxen" iconURL={arrowRight} href={'#products'} />
       </div>
 
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero2 bg-cover bg-center">
         <img
-          src={bigShoeImg}
+          src={bigHeroImg}
           alt="shoe colletion"
           width={600}
           height={500}
@@ -38,13 +37,13 @@ const Hero = () => {
         />
 
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-          {shoes.map((image, index) => (
+          {heros.map((image, index) => (
             <div key={index}>
-              <ShoeCard
+              <Card
                 index={index}
                 imgURL={image}
-                changeBigShoeImage={shoe => setBigShoeImg(shoe)}
-                bigShoeImg={bigShoeImg}
+                changeBigHeroImage={shoe => setBigHeroImg(shoe)}
+                bigHeroImg={bigHeroImg}
               />
             </div>
           ))}

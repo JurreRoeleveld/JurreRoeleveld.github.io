@@ -1,7 +1,7 @@
 import { bottle20 } from '../assets/images';
 import { Button } from '../components';
 
-const SuperQuality = () => {
+const DeWijnen = () => {
   return (
     <section
       id="de-wijnen"
@@ -18,14 +18,14 @@ const SuperQuality = () => {
           een verhaal, niet alleen over zijn verrukkelijke smaken, maar ook over
           de gepassioneerde makers en de prachtige streek waar ze vandaan komen.
         </p>
-        <p className="mt-4 lg:max-w-lg info-text">
+        {/* <p className="mt-4 lg:max-w-lg info-text">
           Ontdek onze wijnboxen, elk gevuld met een zorgvuldig gekozen
           assortiment van kwaliteitswijnen die zijn gekozen vanwege hun
           karakter, authenticiteit en verbondenheid met de natuur. Laat je
           verrassen door de diversiteit aan smaken, aroma’s en het verhaal
           achter elke fles terwijl je geniet van de reis door verschillende
           wijnregio’s en wijnmakers.
-        </p>
+        </p> */}
 
         <p className="mt-4 lg:max-w-lg info-text">
           Of je nu een doorgewinterde wijnkenner bent of gewoon op zoek bent
@@ -40,8 +40,8 @@ const SuperQuality = () => {
         <img
           src={bottle20}
           alt="product detail"
-          width={180}
-          height={180}
+          width={130}
+          height={130}
           className="object-contain"
         />
       </div>
@@ -49,4 +49,4 @@ const SuperQuality = () => {
   );
 };
 
-export default SuperQuality;
+export default DeWijnen;

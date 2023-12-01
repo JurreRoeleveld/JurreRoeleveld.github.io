@@ -6,12 +6,10 @@ import {
   Hero,
   PopularProducts,
   Services,
-  Subscribe,
-  SuperQuality,
-  SuperQuality2,
-  Modal
+  Modal,
+  DeWijnen,
+  Natuurwijnen
 } from './sections';
-
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -27,13 +25,13 @@ const App = () => {
         <PopularProducts setShowModal={setShowModal} />
       </section>
       <section className="padding">
-        <SuperQuality />
+        <DeWijnen />
       </section>
       <section className="padding-x py-10">
         <Services />
       </section>
       <section className="padding">
-        <SuperQuality2 />
+        <Natuurwijnen />
       </section>
       {/* <section className="padding">
         <SpecialOffer />
@@ -41,9 +39,9 @@ const App = () => {
       <section className="bg-pale-blue padding">
         <CustomerReviews />
       </section>
-      <section className="padding-x sm:py-32 py-16 w-full">
+      {/* <section className="padding-x sm:py-32 py-16 w-full">
         <Subscribe />
-      </section>
+      </section> */}
       <section className=" bg-black padding-x padding-t pb-8">
         <Footer />
       </section>

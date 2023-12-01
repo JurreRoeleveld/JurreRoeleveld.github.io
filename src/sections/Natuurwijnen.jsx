@@ -1,6 +1,6 @@
 import { bottle10 } from '../assets/images';
 
-const SuperQuality2 = () => {
+const ImgWithInfo = () => {
   return (
     <section
       id="natuurwijn"
@@ -10,15 +10,13 @@ const SuperQuality2 = () => {
         <img
           src={bottle10}
           alt="product detail"
-          width={180}
-          height={180}
-          className="object-contain"
+          className="max-w-full max-h-full object-contain"
         />
       </div>
 
       <div className="flex flex-1 flex-col">
         <h2 className="font-palanquin text-4xl lg:max-w-lg font-bold">
-         <span className="text-main-color">Wat zijn natuurwijnen? </span>
+          <span className="text-main-color">Wat zijn natuurwijnen? </span>
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
           Natuurwijnen, een levendige uitdrukking van de aarde zelf, vangen de
@@ -41,4 +39,4 @@ const SuperQuality2 = () => {
   );
 };
 
-export default SuperQuality2;
+export default ImgWithInfo;

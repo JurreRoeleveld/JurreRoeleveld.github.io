@@ -23,6 +23,7 @@ export default {
         primary: '#ECEEFF',
         'main-color': '#ba4343',
         'zalm-red': '#ba4343',
+        'cyan-blue': '#43baba',
         'coral-red': '#FF6452',
         'deep-green': '#3e9652',
         'bordeaux-red': '#5F021F',
@@ -35,6 +36,7 @@ export default {
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
+        hero2: "url('assets/images/vineyard.jpg')",
         card: "url('assets/images/thumbnail-background.svg')"
       },
       screens: {
