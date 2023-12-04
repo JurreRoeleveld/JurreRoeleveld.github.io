@@ -11,7 +11,7 @@ import {
   bottle1,
   bottle2,
   bottle3,
-  rori,
+  frank,
   jesper,
   box1,
   box2,
@@ -73,10 +73,10 @@ export const reviews = [
     feedback: 'Wat een exquise boxen, kan het zeer aanraden!'
   },
   {
-    imgURL: rori,
-    customerName: 'Rori Wijnhorst',
+    imgURL: frank,
+    customerName: 'Frank Bokdam',
     rating: 5,
-    feedback: 'Wat een feestje die wijnen, kon er erg goed op dansen!'
+    feedback: 'Het natuurwijnpakket van Bobs Dansende Wijnen was de gangmaker tijdens onze oudjaarsavond. Iedereen vond weer een andere wijn de lekkerste en doordat bij elke wijn een korte tekst zit met uitleg over de smaak, waren we wat bewuster aan het proeven en was elke nieuwe fles een conversation starter. Natuurlijk zat er ook een flesje bubbels bij om het nieuwe jaar mee in te luiden.'
   }
 ];
 

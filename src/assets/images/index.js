@@ -23,7 +23,7 @@ import nix18 from './nix-18.svg';
 
 import vineYard from './vineyard.jpg';
 import jesper from './jesper.jpg';
-import rori from './rori.jpg';
+import frank from './frank.jpg';
 
 export {
   customer1,
@@ -44,5 +44,5 @@ export {
   nix18,
   vineYard,
   jesper,
-  rori
+  frank
 };
