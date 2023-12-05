@@ -77,7 +77,7 @@ export const wines = {
     img: doggerland
   },
   doggerland: {
-    name: 'Domaine des Chenes "les olivetes"',
+    name: 'Domaine des Chenes "hybrid"',
     type: 'Licht oranje',
     price: 13.56,
     img: domaine_des_chenes
