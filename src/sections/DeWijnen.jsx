@@ -1,4 +1,4 @@
-import { bottle20 } from '../assets/images';
+import { a } from '../assets/images';
 import { Button } from '../components';
 
 const DeWijnen = () => {
@@ -38,11 +38,9 @@ const DeWijnen = () => {
 
       <div className="flex-1 flex justify-center items-center">
         <img
-          src={bottle20}
+          src={a}
           alt="product detail"
-          width={130}
-          height={130}
-          className="object-contain"
+          className="max-w-full max-h-full object-contain"
         />
       </div>
     </section>

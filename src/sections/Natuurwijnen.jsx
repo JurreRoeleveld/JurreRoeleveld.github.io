@@ -1,4 +1,4 @@
-import { bottle10 } from '../assets/images';
+import { doggerland } from '../assets/images';
 
 const ImgWithInfo = () => {
   return (
@@ -8,7 +8,7 @@ const ImgWithInfo = () => {
     >
       <div className="flex-1 flex justify-center items-center">
         <img
-          src={bottle10}
+          src={doggerland}
           alt="product detail"
           className="max-w-full max-h-full object-contain"
         />
