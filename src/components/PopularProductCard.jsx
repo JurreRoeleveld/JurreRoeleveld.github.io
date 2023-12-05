@@ -11,7 +11,7 @@ const PopularProductCard = ({ imgURL, name, price, productInfo, wines }) => {
   const renderWineList = () => {
     return wines.map(wine => (
       <li key={wine.name}>
-        Name: {wine.name}, Type: {wine.type}, Price: ${wine.price.toFixed(2)}
+        <strong>{wine.name}</strong> {wine.type}
       </li>
     ));
   };
@@ -45,8 +45,6 @@ const PopularProductCard = ({ imgURL, name, price, productInfo, wines }) => {
       {moreInfo ? (
         <>
           <ul>{renderWineList()}</ul>
-
-          <p>{productInfo}</p>
         </>
       ) : null}
     </div>
