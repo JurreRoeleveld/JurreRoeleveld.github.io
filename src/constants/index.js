@@ -95,9 +95,9 @@ export const products = [
     productInfo:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
     wines: [
-      wines.Gotas_de_plata,
       wines.Domaine_la_montagnette,
-      wines.Quattrocento
+      wines.Quattrocento,
+      wines.Gotas_de_plata
     ]
   },
   {
@@ -108,7 +108,7 @@ export const products = [
     price: '39,15',
     productInfo:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
-    wines: [wines.doggerland, wines.Domaine_des_Chenes, wines.a]
+    wines: [wines.a, wines.Domaine_des_Chenes, wines.doggerland]
   },
   // {
   //   imgURL: gotas_de_plata_pakket,
