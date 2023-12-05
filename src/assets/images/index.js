@@ -25,6 +25,17 @@ import vineYard from './vineyard.jpg';
 import jesper from './jesper.jpg';
 import frank from './frank.jpg';
 
+import gotas_de_plata_pakket from './gotas_de_plata_pakket.jpg';
+import a from './a.jpg';
+import doggerland from './doggerland.jpg';
+import domaine_des_chenes from './domaine_des_chenes.jpg';
+import domaine_la_montagnette from './domaine_la_montagnette.jpg';
+import gotas_de_plata from './gotas_de_plata.jpg';
+import quattrocento from './quattrocento.jpg';
+
+import pakket1 from './pakket1.jpg';
+import pakket2_1 from './pakket2_1.jpg';
+
 export {
   customer1,
   customer2,
@@ -44,5 +55,14 @@ export {
   nix18,
   vineYard,
   jesper,
-  frank
+  frank,
+  gotas_de_plata,
+  a,
+  doggerland,
+  domaine_des_chenes,
+  domaine_la_montagnette,
+  gotas_de_plata_pakket,
+  quattrocento,
+  pakket1,
+  pakket2_1
 };

@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 import { heros } from '../constants';
 import { Button, Card } from '../components';
-import { box1 } from '../assets/images';
+import { box1, pakket1 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {
-  const [bigHeroImg, setBigHeroImg] = useState(box1);
+  const [bigHeroImg, setBigHeroImg] = useState(pakket1);
 
   return (
     <section
@@ -24,15 +24,15 @@ const Hero = () => {
           <span className="text-main-color inline-block mt-3">dansen!</span>
         </h1>
 
-        <Button label="De boxen" iconURL={arrowRight} href={'#products'} />
+        <Button label="De pakketten" iconURL={arrowRight} href={'#products'} />
       </div>
 
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero2 bg-cover bg-center">
         <img
           src={bigHeroImg}
           alt="shoe colletion"
-          width={600}
-          height={500}
+          width={375}
+          height={200}
           className="object-contain relative z-10"
         />
 

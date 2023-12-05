@@ -18,8 +18,8 @@ const Card = ({ imgURL, changeBigHeroImage, bigHeroImg }) => {
         <img
           src={imgURL.thumbnail}
           alt="wine colletion"
-          width={400}
-          height={400}
+          width={250}
+          height={250}
           className="object-contain"
         />
       </div>
