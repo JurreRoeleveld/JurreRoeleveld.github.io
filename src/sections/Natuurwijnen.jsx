@@ -10,7 +10,7 @@ const ImgWithInfo = () => {
         <img
           src={doggerland}
           alt="product detail"
-          className="max-w-full max-h-full object-contain"
+          className="max-w-full max-h-96 object-contain"
         />
       </div>
 
