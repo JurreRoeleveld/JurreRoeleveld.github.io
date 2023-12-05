@@ -30,6 +30,7 @@ const PopularProductCard = ({ imgURL, name, price, productInfo, wines }) => {
         <h3 className="text-2xl leading-normal font-semibold font-palanquin">
           {name}
         </h3>
+
         <img
           src={moreInfo ? expandUp : expandDown}
           alt="Wine colletion"
@@ -42,6 +43,9 @@ const PopularProductCard = ({ imgURL, name, price, productInfo, wines }) => {
       <p className="mt-2 font-semibold font-montserrat text-main-color text-2xl leading-normal">
         {price}
       </p>
+      <a href="mailto:dansendewijnen@gmail.com?subject=Bestelling%20box%201&body=Hi%2C%20Ik%20wil%20graag%20box%201%20bestellen">
+        Order Box 1
+      </a>
       {moreInfo ? (
         <>
           <ul>{renderWineList()}</ul>
