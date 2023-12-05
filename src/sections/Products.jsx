@@ -13,8 +13,7 @@ const PopularProducts = setShowModal => {
           Onze <span className="text-main-color"> wijn </span> pakketten
         </h2>
         <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray">
-          In de pakketten zit een verschillend aantal wijnen. Klik om meer te
-          zien.
+          In de pakketten zit een verschillend aantal wijnen. Klik op het pakket om meer te zien.
         </p>
       </div>
 
