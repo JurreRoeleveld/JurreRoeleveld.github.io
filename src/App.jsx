@@ -18,7 +18,7 @@ const App = () => {
     <main className="relative">
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <Nav />
-      <section className="xl:padding-l wide:padding-r padding-b">
+      <section className="padding">
         <Hero />
       </section>
       <section className="padding">

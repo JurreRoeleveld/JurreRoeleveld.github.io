@@ -11,23 +11,23 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+      className="w-full flex xl:flex-row-reverse flex-col justify-left gap-1 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
         {/* <p className="text-xl font-montserrat text-main-color">
           Dansende wijnen
         </p> */}
-        <h1 className="mt-10 font-palanquin text-6xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
+        <h1 className="mt-10 font-palanquin flex justify-end text-6xl max-sm:text-[72px] max-sm:leading-[82px] font-bold text-right">
           <span className="xl:whitespace-wrap relative z-10 pr-5">
-            Wijnen om van te
+            Wijnen om van te{' '}
+            <span className="text-main-color inline-block mt-3">dansen!</span>
           </span>
-          <span className="text-main-color inline-block mt-3">dansen!</span>
         </h1>
 
-        <Button label="De pakketten" iconURL={arrowRight} href={'#products'} />
+        {/* <Button label="De pakketten" iconURL={arrowRight} href={'#products'} /> */}
       </div>
 
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero2 bg-cover bg-center">
+      {/* <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero2 bg-cover bg-left">
         <img
           src={bigHeroImg}
           alt="shoe colletion"
@@ -46,9 +46,9 @@ const Hero = () => {
                 bigHeroImg={bigHeroImg}
               />
             </div>
-          ))}
+          ))} 
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
