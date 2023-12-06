@@ -11,9 +11,13 @@ const PopularProductCard = ({ imgURL, name, price, mailto, wines }) => {
 
   const renderWineList = () => {
     return wines.map(wine => (
-      <li key={wine.name}>
-        <strong>{wine.name}</strong> {wine.type}
-      </li>
+      <>
+        <li key={wine?.name}>
+          <strong>{wine?.name}</strong> {wine?.type}
+        </li>
+        <li>{wine?.info}</li>
+        <br></br>
+      </>
     ));
   };
 
@@ -42,10 +46,10 @@ const PopularProductCard = ({ imgURL, name, price, mailto, wines }) => {
         <p className="mt-2 font-semibold font-montserrat text-main-color text-2xl leading-normal">
           {price}
         </p>
-        </div>
-        <Button label={'Bestel'} mailto={mailto}>
-          Bestel
-        </Button>
+      </div>
+      <Button label={'Bestel'} mailto={mailto}>
+        Bestel
+      </Button>
 
       {moreInfo ? (
         <>

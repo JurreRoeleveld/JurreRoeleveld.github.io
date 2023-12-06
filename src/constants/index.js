@@ -51,34 +51,38 @@ export const wines = {
     name: 'Gotas de plata',
     type: 'Bubbels',
     price: 11.56,
-    img: gotas_de_plata
+    img: gotas_de_plata,
+    info: "Jahoor, daar is ie weer:  “GOTAS!” “GOTAS!” “GOTAS!” 'Brut' geeft aan dat er nog een beetje zoet in de wijn zit. Zoet is goed! Wijn uit La Mancha; warme druifjes, rijpe wijn en zeker ook nog fris sap! Het lukt ze daar allemaal op die mega-fabriek. Maar dit is voor hen een leuk side-project. En wij plukken de vruchten van het schaalvoordeel. "
   },
   Domaine_la_montagnette: {
-    name: 'domaine la montagnette',
+    name: 'Domaine la montagnette',
     type: 'stevig rood',
     price: 11.8,
-    img: domaine_la_montagnette
+    img: domaine_la_montagnette,
+    info: 'Bij het Kerstdiner kan een stevige rode wijn natuurlijk niet ontbreken. Ditmaal is de keuze gevallen op “Domaine la Montagnette”. Stevige Syrah geeft textuur aan deze wijn. Iets van groene kruiden kijkt de hoek om, iets peperigs? Dan het sap van Grenache en Mourvèdre, brengen ook bessigheid met zich mee. Een bek vol tannine en toch sappig, wat fijn! Dat moet wel een natuur wijn zijn.'
   },
   Quattrocento: {
-    name: 'Quattrocento',
+    name: 'Quattrocento Bianco',
     type: 'stevig wit',
     price: 13.92,
-    img: quattrocento
+    img: quattrocento,
+    info: 'Wijn om bij te eten. Geen vlees, maar dat doen jullie toch al niet meer? Italiaans wit met 6 dagen schilweking, gewoon hoe wit tegenwoordig in Italië gemaakt wordt. Niks moeilijk doen met licht oranje etc. Niet te koud drinken! Sowieso wordt wit te koud en rood te warm gedronken. Iets oxidatief in de neus, wat een textuur, vettig plus een beetje tannine, en dus perfect bij Italiaanse pot.'
   },
-  il_baffone: { name: 'il baffone', type: 'oranje bubbel', price: 14.57 },
-  Domaine_des_Chenes: {
+  doggerland: {
     name: 'Doggerland x Martinus',
     type: 'cider + saison',
     price: 10.41,
-    img: doggerland
+    img: doggerland,
+    info: 'Barrel-aged Cider Saison Hybrid. Dat is de volledige naam van deze drank. Het brainchild van ondergetekende, gerealiseerd in samenwerking met Jurjen en Nanne van Doggerland en Martijn en Luca van Martinus. Cider is altijd lekker fris zuur maar het mag ook wel een keer wat voller en zoeter zijn. Maar als je dan zo natuurlijk mogelijk wil werken, dan hou je geen suiker over. Vandaar dat de mout van het saison bier is ingeschakeld voor dat heerlijke mondgevoel en ietsje zoetheid dat deze hybrid mooi in balans brengt.'
   },
-  doggerland: {
+  Domaine_des_Chenes: {
     name: 'Domaine des Chenes "hybrid"',
     type: 'Licht oranje',
     price: 13.56,
-    img: domaine_des_chenes
+    img: domaine_des_chenes,
+    info: 'todo'
   },
-  a: { name: 'a...', type: 'donker rosé', price: 15.19, img: a }
+  a: { name: 'a...', type: 'donker rosé', price: 15.19, img: a, info: 'todo' }
 };
 
 export const products = [
