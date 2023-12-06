@@ -15,11 +15,9 @@ import {
   doggerland,
   domaine_des_chenes,
   domaine_la_montagnette,
-  gotas_de_plata_pakket,
   quattrocento,
   pakket1,
   pakket2_1,
-  invitation_club_liggend,
   invitation_club_staand
 } from '../assets/images';
 

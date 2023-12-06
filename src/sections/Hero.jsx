@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { heros } from '../constants';
 import { Button, Card } from '../components';
-import { box1, pakket1 } from '../assets/images';
+import { pakket1 } from '../assets/images';
 import { arrowRight } from '../assets/icons';
 
 const Hero = () => {

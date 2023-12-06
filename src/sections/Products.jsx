@@ -2,9 +2,9 @@ import { products } from '../constants';
 import { PopularProductCard } from '../components';
 
 const PopularProducts = setShowModal => {
-  const handleClick = () => {
-    setShowModal(true);
-  };
+  // const handleClick = () => {
+  //   setShowModal(true);
+  // };
 
   return (
     <section id="products" className="max-container max-sm:mt-12">
