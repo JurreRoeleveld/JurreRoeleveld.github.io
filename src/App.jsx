@@ -21,7 +21,7 @@ const App = () => {
       <section className="padding">
         <Hero />
       </section>
-      <section className="padding">
+      <section className="padding-x ">
         <PopularProducts setShowModal={setShowModal} />
       </section>
       <section className="padding">

@@ -18,7 +18,8 @@ import {
   quattrocento,
   pakket1,
   pakket2_1,
-  invitation_club_staand
+  invitation_club_staand,
+  gotas_de_plata_pakket
 } from '../assets/images';
 
 export const navLinks = [
@@ -113,7 +114,7 @@ export const products = [
   },
   {
     imgURL: invitation_club_staand,
-    name: 'Dansende wijnpakket No.9: Invitation to Club Exquise',
+    name: 'Dansende wijnpakket No.8: Invitation to Club Exquise',
     mailto:
       'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%203&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%203%20bestellen%21',
     price: '76,43',
@@ -127,17 +128,17 @@ export const products = [
       wines.Domaine_des_Chenes,
       wines.a
     ]
+  },
+  {
+    imgURL: gotas_de_plata_pakket,
+    mailto:
+      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%203&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%203%20bestellen%21',
+    name: 'Dansende wijnpakket No.9: Dansende Bubbelbox',
+    price: '34,68',
+    productInfo:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
+    wines: [wines.Gotas_de_plata]
   }
-  // {
-  //   imgURL: gotas_de_plata_pakket,
-  //   mailto:
-  //     'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%203&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%203%20bestellen%21',
-  //   name: 'Dansende Bubbelbox',
-  //   price: '76,43',
-  //   productInfo:
-  //     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
-  //   wines: [wines.Gotas_de_plata]
-  // }
 ];
 
 export const reviews = [

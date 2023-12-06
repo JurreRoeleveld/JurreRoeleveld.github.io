@@ -28,8 +28,12 @@ const PopularProductCard = ({ imgURL, name, price, mailto, wines }) => {
           <img src={imgURL} alt={name} className="w-[282px] h-[350px]" />
         </div>
         <div className="mt-8 flex justify-start gap-2.5"></div>
-
-        <div className="flex block">
+      </div>
+      <Button label={'Bestel'} mailto={mailto}>
+        Bestel
+      </Button>
+      <div onClick={handleClick}>
+        <div className="flex items-start">
           <h3 className="text-2xl leading-normal font-semibold font-palanquin">
             {name}
           </h3>
@@ -46,18 +50,13 @@ const PopularProductCard = ({ imgURL, name, price, mailto, wines }) => {
         <p className="mt-2 font-semibold font-montserrat text-main-color text-2xl leading-normal">
           {price}
         </p>
-      </div>
-      <Button label={'Bestel'} mailto={mailto}>
-        Bestel
-      </Button>
 
-      {moreInfo ? (
-        <>
-          <div onClick={handleClick}>
+        {moreInfo ? (
+          <>
             <ul>{renderWineList()}</ul>
-          </div>
-        </>
-      ) : null}
+          </>
+        ) : null}
+      </div>
     </div>
   );
 };
