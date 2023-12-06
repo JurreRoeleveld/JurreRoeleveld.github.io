@@ -1,4 +1,4 @@
-import { doggerland } from '../assets/images';
+import { domaine_des_chenes } from '../assets/images';
 
 const ImgWithInfo = () => {
   return (
@@ -8,7 +8,7 @@ const ImgWithInfo = () => {
     >
       <div className="flex-1 flex justify-center items-center">
         <img
-          src={doggerland}
+          src={domaine_des_chenes}
           alt="product detail"
           className="max-w-full max-h-96 object-contain"
         />

@@ -24,8 +24,12 @@ import nix18 from './nix-18.svg';
 import vineYard from './vineyard.jpg';
 import jesper from './jesper.jpg';
 import frank from './frank.jpg';
+import jesse from './jesse.jpg';
 
 import gotas_de_plata_pakket from './gotas_de_plata_pakket.jpg';
+import invitation_club_liggend from './invitation_club_liggend.jpg';
+import invitation_club_staand from './invitation_club_staand.jpg';
+
 import a from './a.jpg';
 import doggerland from './doggerland.jpg';
 import domaine_des_chenes from './domaine_des_chenes.jpg';
@@ -64,5 +68,8 @@ export {
   gotas_de_plata_pakket,
   quattrocento,
   pakket1,
-  pakket2_1
+  pakket2_1,
+  invitation_club_liggend,
+  invitation_club_staand,
+  jesse
 };
