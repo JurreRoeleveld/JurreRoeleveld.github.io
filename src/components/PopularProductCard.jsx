@@ -53,7 +53,9 @@ const PopularProductCard = ({ imgURL, name, price, mailto, wines }) => {
 
       {moreInfo ? (
         <>
-          <ul>{renderWineList()}</ul>
+          <div onClick={handleClick}>
+            <ul>{renderWineList()}</ul>
+          </div>
         </>
       ) : null}
     </div>
