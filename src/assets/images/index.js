@@ -27,7 +27,6 @@ import frank from './frank.jpg';
 import jesse from './jesse.jpg';
 
 import gotas_de_plata_pakket from './gotas_de_plata_pakket.jpg';
-import invitation_club_liggend from './invitation_club_liggend.jpg';
 import invitation_club_staand from './invitation_club_staand.jpg';
 
 import a from './a.jpg';
@@ -69,7 +68,6 @@ export {
   quattrocento,
   pakket1,
   pakket2_1,
-  invitation_club_liggend,
   invitation_club_staand,
   jesse
 };
