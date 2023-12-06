@@ -57,6 +57,7 @@ export const wines = {
     type: 'stevig rood',
     price: 11.8,
     img: domaine_la_montagnette,
+    year: 2021,
     info: 'Bij het Kerstdiner kan een stevige rode wijn natuurlijk niet ontbreken. Ditmaal is de keuze gevallen op “Domaine la Montagnette”. Stevige Syrah geeft textuur aan deze wijn. Iets van groene kruiden kijkt de hoek om, iets peperigs? Dan het sap van Grenache en Mourvèdre, brengen ook bessigheid met zich mee. Een bek vol tannine en toch sappig, wat fijn! Dat moet wel een natuur wijn zijn.'
   },
   Quattrocento: {
@@ -64,20 +65,22 @@ export const wines = {
     type: 'stevig wit',
     price: 13.92,
     img: quattrocento,
+    year: 2020,
     info: 'Wijn om bij te eten. Geen vlees, maar dat doen jullie toch al niet meer? Italiaans wit met 6 dagen schilweking, gewoon hoe wit tegenwoordig in Italië gemaakt wordt. Niks moeilijk doen met licht oranje etc. Niet te koud drinken! Sowieso wordt wit te koud en rood te warm gedronken. Iets oxidatief in de neus, wat een textuur, vettig plus een beetje tannine, en dus perfect bij Italiaanse pot.'
   },
   doggerland: {
-    name: 'Doggerland x Martinus',
+    name: 'Doggerland x Martinus "hybrid"',
     type: 'cider + saison',
     price: 10.41,
     img: doggerland,
     info: 'Barrel-aged Cider Saison Hybrid. Dat is de volledige naam van deze drank. Het brainchild van ondergetekende, gerealiseerd in samenwerking met Jurjen en Nanne van Doggerland en Martijn en Luca van Martinus. Cider is altijd lekker fris zuur maar het mag ook wel een keer wat voller en zoeter zijn. Maar als je dan zo natuurlijk mogelijk wil werken, dan hou je geen suiker over. Vandaar dat de mout van het saison bier is ingeschakeld voor dat heerlijke mondgevoel en ietsje zoetheid dat deze hybrid mooi in balans brengt.'
   },
   Domaine_des_Chenes: {
-    name: 'Domaine des Chenes "hybrid"',
+    name: 'Domaine des Chenes "les olivetes"',
     type: 'Licht oranje',
     price: 13.56,
     img: domaine_des_chenes,
+    year: 2021,
     info: 'todo'
   },
   a: { name: 'a...', type: 'donker rosé', price: 15.19, img: a, info: 'todo' }
