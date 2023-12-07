@@ -92,7 +92,7 @@ export const products = [
     imgURL: pakket1,
     name: 'Dansende wijnpakket No.6: Dancing After Dark ',
     mailto:
-      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%201&body=Hi%2C%20Ik%20wil%20graag%20%20dansende%20pakket%201%20bestellen%21',
+      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket&body=Hi%2C%20Ik%20wil%20graag%20%20dansende%20pakket%20Dancing%20After%20Dark%20bestellen%21',
     price: '37,28',
     productInfo:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
@@ -105,7 +105,7 @@ export const products = [
   {
     imgURL: pakket2_1,
     mailto:
-      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%202&body=Hi%2C%20Ik%20wil%20graag%20%20dansende%20pakket%202%20bestellen%21',
+      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket&body=Hi%2C%20Ik%20wil%20graag%20%20dansende%20pakket%20House%20Music%20bestellen%21',
     name: 'Dansende wijnpakket No.7: House Music Vol.3',
     price: '39,15',
     productInfo:
@@ -116,7 +116,7 @@ export const products = [
     imgURL: invitation_club_staand,
     name: 'Dansende wijnpakket No.8: Invitation to Club Exquise',
     mailto:
-      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%203&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%203%20bestellen%21',
+      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%20Invitation%20to%20Club%20Exquise%20bestellen%21',
     price: '76,43',
     productInfo:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam vel nobis officia blanditiis, possimus esse, officiis dignissimos neque voluptates est iure id. Necessitatibus et inventore doloremque quod itaque asperiores.',
@@ -132,7 +132,7 @@ export const products = [
   {
     imgURL: gotas_de_plata_pakket,
     mailto:
-      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket%203&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%203%20bestellen%21',
+      'mailto:dansendewijnen@gmail.com?subject=Bestelling%20pakket&body=Hi%2C%20Ik%20wil%20graag%20het%20dansende%20pakket%20Dansende%20Bubbelbox%20bestellen%21',
     name: 'Dansende wijnpakket No.9: Dansende Bubbelbox',
     price: '34,68',
     productInfo:
