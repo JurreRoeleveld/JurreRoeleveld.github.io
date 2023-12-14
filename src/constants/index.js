@@ -82,9 +82,15 @@ export const wines = {
     price: 13.56,
     img: domaine_des_chenes,
     year: 2021,
-    info: 'todo'
+    info: 'Dansende wijnen zijn aromatische wijnen en druiven zijn op te delen in aromatische druiven en niet-aromatische druiven. Goede voorbeelden van aromatische druiven Sauvignon Blanc en Muscat. Dit betekent dat overal waar je deze druiven plukt, de wijn ongeveer dezelfde aroma’s zal hebben. Deze wijn is gemaakt van eentje uit de muscat familie: Muscat à Petits Grains. Super aromatisch, verleidelijk geurend, heel fijn. Mooie textuur ook. Je proeft dat deze druiven het warm hebben gehad in het diepe zuiden van Frankrijk. De wijn krijgt daar een soort dikte van maar omdat deze druifjes van de hoger gelegen wijngaarden komen is er ook voldoende frisheid. '
   },
-  a: { name: 'a...', type: 'donker rosé', price: 15.19, img: a, info: 'todo' }
+  a: {
+    name: 'a...',
+    type: 'donker rosé',
+    price: 15.19,
+    img: a,
+    info: 'Wat een gekke naam toch “A…”. Daar lijkt wat te missen. Dat klopt ook, tot voor kort heette deze wijn “A bicyclette". Totdat een Chileense wijngigant problemen ging maken. Cono Sur vond het te veel op hun Bicicleta range lijken. De vrolijk fietsende dame mocht wel blijven. Zo proeft deze wijn ook wel een beetje, fleurig, zomers en enorm sappig. Van de rosé druif bij uitstek: Cinsault. Normaal worden de schilletjes direct uit het sap geperst maar in deze wijn mochten ze iets langer rondzwemmen dat deze rosé een diepere kleur en iets meer body geeft. '
+  }
 };
 
 export const products = [
