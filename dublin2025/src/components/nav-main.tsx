@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/collapsible"
 import {
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -37,7 +36,6 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible key={item.title} asChild open={item.items && item.items.length > 0}>
@@ -46,7 +44,6 @@ export function NavMain({
                 tooltip={item.title}
                 onClick={() => {
                   if (item.items && item.items.length > 0) {
-                    console.log('Main menu clicked:', item.title, 'navigating to first submenu:', item.items[0].title)
                     onItemClick?.(item.items[0].title.toLowerCase())
                   }
                 }}
@@ -62,7 +59,6 @@ export function NavMain({
                       <SidebarMenuSubItem key={subItem.title}>
                         <SidebarMenuSubButton 
                           onClick={() => {
-                            console.log('Navigation clicked:', subItem.title, 'converted to:', subItem.title.toLowerCase())
                             onItemClick?.(subItem.title.toLowerCase())
                           }}
                           className={`cursor-pointer ${activeItem === subItem.title.toLowerCase() ? "bg-sidebar-accent" : ""}`}

@@ -1,9 +1,9 @@
-import * as React from "react"
+"use client"
+
 import { type LucideIcon } from "lucide-react"
 
 import {
   SidebarGroup,
-  SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -11,30 +11,29 @@ import {
 
 export function NavSecondary({
   items,
-  ...props
+  onItemClick,
+  className,
 }: {
   items: {
     title: string
     url: string
     icon: LucideIcon
   }[]
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+  onItemClick?: (item: string) => void
+  className?: string
+}) {
   return (
-    <SidebarGroup {...props}>
-      <SidebarGroupContent>
-        <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild size="sm">
-                <a href={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarGroupContent>
+    <SidebarGroup className={className}>
+      <SidebarMenu>
+        {items.map((item) => (
+          <SidebarMenuItem key={item.title}>
+            <SidebarMenuButton tooltip={item.title} onClick={() => onItemClick?.(item.title.toLowerCase())}>
+              <item.icon />
+              <span>{item.title}</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        ))}
+      </SidebarMenu>
     </SidebarGroup>
   )
 }

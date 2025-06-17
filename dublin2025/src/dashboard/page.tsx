@@ -70,7 +70,7 @@ function PageContent() {
         </header>
         <main className="flex-1 overflow-auto">
           <SidebarInset>
-            <DashboardContent activeItem={activeItem} />
+            <DashboardContent activeItem={activeItem} onItemClick={handleItemClick} />
           </SidebarInset>
         </main>
       </div>

@@ -1,7 +1,5 @@
 import * as React from "react"
 import {
-  Command,
-  LifeBuoy,
   Send,
   Plane,
   Building,
@@ -11,11 +9,9 @@ import {
 
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -23,11 +19,6 @@ import {
 } from "@/components/ui/sidebar"
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   navMain: [
     {
       title: "Reis",
@@ -80,26 +71,29 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "optie 1",
+          title: "Trinity College",
           url: "#",
         },
         {
-          title: "optie 2",
+          title: "Dublin Castle",
           url: "#",
         },
         {
-          title: "optie 3",
+          title: "National Museum",
+          url: "#",
+        },
+        {
+          title: "Kilmainham Gaol",
+          url: "#",
+        },
+        {
+          title: "St. Patrick's Cathedral",
           url: "#",
         },
       ],
     },
   ],
   navSecondary: [
-    {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
-    },
     {
       title: "Feedback",
       url: "#",
@@ -121,8 +115,8 @@ export function AppSidebar({ activeItem, onItemClick, ...props }: AppSidebarProp
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <button onClick={() => onItemClick?.("home")}>
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Command className="size-4" />
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
+                  <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☘️</text></svg>" alt="Dublin 2025 Icon" className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">Dublin 2025</span>
@@ -135,11 +129,8 @@ export function AppSidebar({ activeItem, onItemClick, ...props }: AppSidebarProp
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} activeItem={activeItem} onItemClick={onItemClick} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary items={data.navSecondary} className="mt-auto" onItemClick={onItemClick} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
     </Sidebar>
   )
 }

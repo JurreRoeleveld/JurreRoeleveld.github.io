@@ -1,10 +1,10 @@
-import { MapPin, Calendar, Users, Plane, Heart, ExternalLink } from "lucide-react"
+import { MapPin, Calendar, Plane, Heart, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { WeatherForecast } from "./weather-forecast"
 
-export function IntroPage() {
+export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void }) {
   return (
     <div className="flex flex-col gap-8 p-6">
       {/* Hero Section */}
@@ -27,16 +27,16 @@ export function IntroPage() {
         <Card>
           <CardContent className="flex flex-col items-center p-6">
             <Calendar className="h-8 w-8 text-blue-600 mb-2" />
-            <div className="text-2xl font-bold">Juni 2025</div>
+            <div className="text-2xl font-bold">19-22 juni 2025</div>
             <div className="text-sm text-muted-foreground">Reisperiode</div>
           </CardContent>
         </Card>
         
-        <Card>
+        <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-page")}>
           <CardContent className="flex flex-col items-center p-6">
             <Plane className="h-8 w-8 text-green-600 mb-2" />
             <div className="text-2xl font-bold">EI 603</div>
-            <div className="text-sm text-muted-foreground">Aer Lingus</div>
+            <div className="text-sm text-muted-foreground">Vlucht heen</div>
           </CardContent>
         </Card>
         
@@ -48,11 +48,11 @@ export function IntroPage() {
           </CardContent>
         </Card>
         
-        <Card>
+        <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-return-page")}>
           <CardContent className="flex flex-col items-center p-6">
-            <Users className="h-8 w-8 text-purple-600 mb-2" />
-            <div className="text-2xl font-bold">1,4M</div>
-            <div className="text-sm text-muted-foreground">Inwoners</div>
+            <Plane className="h-8 w-8 text-purple-600 mb-2" />
+            <div className="text-2xl font-bold">EI 608</div>
+            <div className="text-sm text-muted-foreground">Vlucht terug</div>
           </CardContent>
         </Card>
       </div>
@@ -92,7 +92,7 @@ export function IntroPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Heart className="h-5 w-5 text-red-600" />
+              <Calendar className="h-5 w-5 text-purple-600" />
               Trip Highlights
             </CardTitle>
             <CardDescription>
@@ -106,8 +106,8 @@ export function IntroPage() {
                   <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 </div>
                 <div>
-                  <div className="font-medium text-sm">Guinness Storehouse</div>
-                  <div className="text-xs text-muted-foreground">Leer alles over Ierlands beroemdste bier</div>
+                  <div className="font-medium text-sm">Guinness Tour</div>
+                  <div className="text-xs text-muted-foreground">Ontdek het verhaal achter het beroemde Ierse bier</div>
                 </div>
               </div>
               
@@ -116,18 +116,8 @@ export function IntroPage() {
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                 </div>
                 <div>
-                  <div className="font-medium text-sm">Book of Kells</div>
-                  <div className="text-xs text-muted-foreground">Prachtige middeleeuwse manuscripten</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="bg-orange-100 p-1 rounded">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
-                </div>
-                <div>
-                  <div className="font-medium text-sm">Cliffs of Howth</div>
-                  <div className="text-xs text-muted-foreground">Adembenemende kustlijn nabij Dublin</div>
+                  <div className="font-medium text-sm">Greyhound Racing</div>
+                  <div className="text-xs text-muted-foreground">Ervaar de spanning van hondenraces</div>
                 </div>
               </div>
             </div>
@@ -139,7 +129,7 @@ export function IntroPage() {
       <div>
         <h2 className="text-2xl font-semibold mb-4">Plan je reis</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card className="hover:shadow-md transition-shadow cursor-pointer">
+          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-page")}>
             <CardContent className="p-6 text-center">
               <Plane className="h-12 w-12 text-blue-600 mx-auto mb-3" />
               <div className="font-semibold">Vlucht</div>
@@ -147,7 +137,7 @@ export function IntroPage() {
             </CardContent>
           </Card>
           
-          <Card className="hover:shadow-md transition-shadow cursor-pointer">
+          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("appartement")}>
             <CardContent className="p-6 text-center">
               <MapPin className="h-12 w-12 text-green-600 mx-auto mb-3" />
               <div className="font-semibold">Appartement</div>
@@ -155,7 +145,7 @@ export function IntroPage() {
             </CardContent>
           </Card>
           
-          <Card className="hover:shadow-md transition-shadow cursor-pointer">
+          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("planning")}>
             <CardContent className="p-6 text-center">
               <Calendar className="h-12 w-12 text-purple-600 mx-auto mb-3" />
               <div className="font-semibold">Planning</div>
@@ -163,7 +153,7 @@ export function IntroPage() {
             </CardContent>
           </Card>
           
-          <Card className="hover:shadow-md transition-shadow cursor-pointer">
+          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("ontdek")}>
             <CardContent className="p-6 text-center">
               <Heart className="h-12 w-12 text-red-600 mx-auto mb-3" />
               <div className="font-semibold">Ontdek</div>
