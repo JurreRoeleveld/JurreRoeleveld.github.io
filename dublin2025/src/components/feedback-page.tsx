@@ -13,7 +13,7 @@ export function FeedbackPage() {
         </CardHeader>
         <CardContent>
           <p className="text-lg font-medium text-muted-foreground">
-            Meld maar bij het volgend bestuur.
+            Meld maar bij het volgende bestuur.
           </p>
         </CardContent>
       </Card>
