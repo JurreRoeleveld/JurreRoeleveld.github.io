@@ -2,6 +2,7 @@ import { MapPin, Calendar, Users, Plane, Heart, ExternalLink } from "lucide-reac
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { WeatherForecast } from "./weather-forecast"
 
 export function IntroPage() {
   return (
@@ -55,6 +56,9 @@ export function IntroPage() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Weather Forecast */}
+      <WeatherForecast />
 
       {/* Main Content */}
       <div className="grid md:grid-cols-2 gap-6">

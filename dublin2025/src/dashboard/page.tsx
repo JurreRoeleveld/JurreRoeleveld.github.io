@@ -21,7 +21,8 @@ export default function Page() {
 
   const getBreadcrumbTitle = () => {
     switch (activeItem) {
-      case "vlucht": return "Vlucht"
+      case "heen": return "Heenvlucht"
+      case "terug": return "Terugvlucht"
       case "appartement": return "Appartement"
       case "planning": return "Planning"
       case "ontdek": return "Ontdek"

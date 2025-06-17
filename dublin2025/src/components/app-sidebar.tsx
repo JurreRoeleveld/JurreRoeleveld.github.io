@@ -36,7 +36,11 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "Vlucht",
+          title: "Heen",
+          url: "#",
+        },
+        {
+          title: "Terug",
           url: "#",
         },
       ],
@@ -45,6 +49,7 @@ const data = {
       title: "Accomodatie",
       url: "#",
       icon: Building,
+      isActive: true,
       items: [
         {
           title: "Appartement",
@@ -56,12 +61,14 @@ const data = {
       title: "Planning",
       url: "#",
       icon: Calendar,
+      isActive: true,
       items: [],
     },
     {
       title: "Ontdek",
       url: "#",
       icon: Compass,
+      isActive: true,
       items: [
         {
           title: "optie 1",

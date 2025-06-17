@@ -1,21 +1,19 @@
 import { FlightPage } from "./flight-page"
+import { FlightReturnPage } from "./flight-return-page"
 import { IntroPage } from "./intro-page"
+import { ApartmentPage } from "./apartment-page"
 
 export function DashboardContent({ activeItem }: { 
   activeItem: string
 }) {
+  console.log('DashboardContent received activeItem:', activeItem)
   switch (activeItem) {
-    case "vlucht":
+    case "heen":
       return <FlightPage />
+    case "terug":
+      return <FlightReturnPage />
     case "appartement":
-      return (
-        <div className="flex flex-col gap-4 p-6">
-          <h1 className="text-2xl font-bold">Appartement</h1>
-          <div className="bg-muted/50 min-h-[50vh] rounded-xl flex items-center justify-center">
-            <p className="text-muted-foreground">Appartement informatie komt hier...</p>
-          </div>
-        </div>
-      )
+      return <ApartmentPage />
     case "planning":
       return (
         <div className="flex flex-col gap-4 p-6">
