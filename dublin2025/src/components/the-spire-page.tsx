@@ -1,22 +1,22 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, MapPin, Info, Lock, Route } from "lucide-react"
+import { ExternalLink, MapPin, Info, Route, ArrowUp } from "lucide-react"
 
-export function KilmainhamGaolPage() {
-  const address = "Inchicore Rd, Kilmainham, Dublin 8, D08 RK28"
+export function TheSpirePage() {
+  const address = "O'Connell Street Upper, Dublin 1, D01 N5P2"
   const encodedAddress = encodeURIComponent(address)
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
-  const websiteUrl = "https://kilmainhamgaolmuseum.ie/"
+  const websiteUrl = "https://www.visitdublin.com/see-do/details/the-spire"
 
   return (
     <div className="p-4 sm:p-6 space-y-6">
       <div className="flex items-center gap-4">
-        <div className="bg-gray-200 p-3 rounded-lg">
-            <Lock className="h-6 w-6 text-gray-700" />
+        <div className="bg-gray-100 p-3 rounded-lg">
+            <ArrowUp className="h-6 w-6 text-gray-600" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold">Kilmainham Gaol</h1>
-          <p className="text-muted-foreground">Een reis door de turbulente geschiedenis van Ierland.</p>
+          <h1 className="text-2xl font-bold">The Spire</h1>
+          <p className="text-muted-foreground">Het Monument van het Licht.</p>
         </div>
       </div>
       <Card>
@@ -28,7 +28,7 @@ export function KilmainhamGaolPage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-muted-foreground">
-            Kilmainham Gaol is een voormalige gevangenis die een cruciale rol speelde in de Ierse onafhankelijkheidsstrijd. Veel leiders van de opstanden van 1798 tot 1916 werden hier opgesloten en geëxecuteerd. Een rondleiding is een ontroerende en essentiële ervaring voor wie de Ierse geschiedenis wil begrijpen.
+            The Spire, ook bekend als het Monument of Light, is een indrukwekkende 120 meter hoge roestvrijstalen zuil in het hart van Dublin. Het is een van de meest herkenbare moderne monumenten van de stad en een populair ontmoetingspunt.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-gray-50 p-4 rounded-lg border">
@@ -36,7 +36,7 @@ export function KilmainhamGaolPage() {
                     <Route className="h-4 w-4 text-gray-600" />
                     Afstand van Appartement
                 </h4>
-                <p className="text-sm text-muted-foreground">~45 min. lopen / 20 min. met de bus</p>
+                <p className="text-sm text-muted-foreground">~20 minuten lopen</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg border">
                 <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
@@ -57,14 +57,14 @@ export function KilmainhamGaolPage() {
       
       <Card>
         <CardContent className="p-6 text-center">
-            <h3 className="font-semibold mb-2">Tickets & Rondleidingen</h3>
+            <h3 className="font-semibold mb-2">Bezoekersinformatie</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Vooraf boeken is essentieel, aangezien rondleidingen vaak weken van tevoren uitverkocht zijn.
+              The Spire is een openbaar monument en kan op elk moment van de dag worden bekeken. Het is 's nachts prachtig verlicht.
             </p>
             <Button variant="outline" size="sm" asChild>
                 <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
-                Boek Tickets
+                Meer Informatie
                 </a>
             </Button>
         </CardContent>

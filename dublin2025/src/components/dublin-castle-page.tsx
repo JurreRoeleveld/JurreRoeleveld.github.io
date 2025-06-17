@@ -47,7 +47,7 @@ export function DublinCastlePage() {
                  <Button size="sm" asChild className="mt-2">
                     <a href={mapsLink} target="_blank" rel="noopener noreferrer">
                         <MapPin className="h-3 w-3 mr-1" />
-                        Open Kaarten
+                        Open Maps
                     </a>
                 </Button>
             </div>

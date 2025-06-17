@@ -18,6 +18,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { DashboardContent } from "@/components/dashboard-content"
+import { navigationData } from "@/lib/navigation-data"
+import type { NavItem } from "@/lib/navigation-data"
 
 function PageContent() {
   const { isMobile, setOpenMobile } = useSidebar()
@@ -31,15 +33,60 @@ function PageContent() {
     }
   }
 
-  const getBreadcrumbTitle = () => {
-    switch (activeItem) {
-      case "heen": return "Heenvlucht"
-      case "terug": return "Terugvlucht"
-      case "appartement": return "Appartement"
-      case "planning": return "Planning"
-      case "ontdek": return "Ontdek"
-      default: return "Overzicht"
+  const getBreadcrumbItems = () => {
+    if (activeItem === "home") {
+      return <BreadcrumbPage>Overzicht</BreadcrumbPage>
     }
+
+    let parent: NavItem | undefined
+    let child: NavItem | undefined
+
+    for (const navItem of navigationData.navMain) {
+      if (navItem.id === activeItem) {
+        parent = navItem
+        break
+      }
+      if (navItem.items) {
+        const foundChild = navItem.items.find(item => item.id === activeItem)
+        if (foundChild) {
+          parent = navItem
+          child = foundChild
+          break
+        }
+      }
+    }
+    
+    if (!parent && activeItem) {
+        const secondaryItem = navigationData.navSecondary.find(item => item.id === activeItem);
+        if (secondaryItem) {
+            parent = secondaryItem
+        }
+    }
+
+    return (
+      <>
+        {parent && (
+          <>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="#" onClick={() => handleItemClick(parent!.id)}>
+                {parent.title}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            {child && <BreadcrumbSeparator />}
+          </>
+        )}
+        {child && (
+          <BreadcrumbItem>
+            <BreadcrumbPage>{child.title}</BreadcrumbPage>
+          </BreadcrumbItem>
+        )}
+         {!child && parent &&(
+          <BreadcrumbItem>
+            <BreadcrumbPage>{parent.title}</BreadcrumbPage>
+          </BreadcrumbItem>
+        )}
+      </>
+    )
   }
 
   return (
@@ -61,9 +108,7 @@ function PageContent() {
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>{getBreadcrumbTitle()}</BreadcrumbPage>
-                </BreadcrumbItem>
+                {getBreadcrumbItems()}
               </BreadcrumbList>
             </Breadcrumb>
           </div>

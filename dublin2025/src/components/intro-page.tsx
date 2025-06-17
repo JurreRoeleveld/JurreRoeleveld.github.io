@@ -26,7 +26,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardContent className="flex flex-col items-center p-6">
-            <Calendar className="h-8 w-8 text-blue-600 mb-2" />
+            <div className="bg-red-100 p-3 rounded-lg mb-2">
+              <Calendar className="h-6 w-6 text-red-600" />
+            </div>
             <div className="text-2xl font-bold">19-22 juni 2025</div>
             <div className="text-sm text-muted-foreground">Reisperiode</div>
           </CardContent>
@@ -34,7 +36,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
         
         <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-page")}>
           <CardContent className="flex flex-col items-center p-6">
-            <Plane className="h-8 w-8 text-green-600 mb-2" />
+            <div className="bg-blue-100 p-3 rounded-lg mb-2">
+              <Plane className="h-6 w-6 text-blue-600" />
+            </div>
             <div className="text-2xl font-bold">EI 603</div>
             <div className="text-sm text-muted-foreground">Vlucht heen</div>
           </CardContent>
@@ -42,7 +46,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
         
         <Card>
           <CardContent className="flex flex-col items-center p-6">
-            <MapPin className="h-8 w-8 text-orange-600 mb-2" />
+            <div className="bg-green-100 p-3 rounded-lg mb-2">
+              <MapPin className="h-6 w-6 text-green-600" />
+            </div>
             <div className="text-2xl font-bold">Dublin</div>
             <div className="text-sm text-muted-foreground">Bestemming</div>
           </CardContent>
@@ -50,7 +56,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
         
         <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-return-page")}>
           <CardContent className="flex flex-col items-center p-6">
-            <Plane className="h-8 w-8 text-purple-600 mb-2" />
+            <div className="bg-orange-100 p-3 rounded-lg mb-2">
+              <Plane className="h-6 w-6 text-orange-600 rotate-180" />
+            </div>
             <div className="text-2xl font-bold">EI 608</div>
             <div className="text-sm text-muted-foreground">Vlucht terug</div>
           </CardContent>
@@ -129,9 +137,11 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
       <div>
         <h2 className="text-2xl font-semibold mb-4">Plan je reis</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("flight-page")}>
+          <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("reis")}>
             <CardContent className="p-6 text-center">
-              <Plane className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+              <div className="bg-blue-100 p-4 rounded-lg inline-block mb-3">
+                <Plane className="h-8 w-8 text-blue-600" />
+              </div>
               <div className="font-semibold">Vlucht</div>
               <div className="text-sm text-muted-foreground">Bekijk je vluchtdetails</div>
             </CardContent>
@@ -139,7 +149,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
           
           <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("appartement")}>
             <CardContent className="p-6 text-center">
-              <MapPin className="h-12 w-12 text-green-600 mx-auto mb-3" />
+              <div className="bg-green-100 p-4 rounded-lg inline-block mb-3">
+                <MapPin className="h-8 w-8 text-green-600" />
+              </div>
               <div className="font-semibold">Appartement</div>
               <div className="text-sm text-muted-foreground">Je accommodatie info</div>
             </CardContent>
@@ -147,7 +159,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
           
           <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("planning")}>
             <CardContent className="p-6 text-center">
-              <Calendar className="h-12 w-12 text-purple-600 mx-auto mb-3" />
+              <div className="bg-red-100 p-4 rounded-lg inline-block mb-3">
+                <Calendar className="h-8 w-8 text-red-600" />
+              </div>
               <div className="font-semibold">Planning</div>
               <div className="text-sm text-muted-foreground">Dagelijkse activiteiten</div>
             </CardContent>
@@ -155,7 +169,9 @@ export function IntroPage({ onItemClick }: { onItemClick: (item: string) => void
           
           <Card className="hover:shadow-md transition-shadow cursor-pointer" onClick={() => onItemClick("ontdek")}>
             <CardContent className="p-6 text-center">
-              <Heart className="h-12 w-12 text-red-600 mx-auto mb-3" />
+              <div className="bg-red-100 p-4 rounded-lg inline-block mb-3">
+                <Heart className="h-8 w-8 text-red-600" />
+              </div>
               <div className="font-semibold">Ontdek</div>
               <div className="text-sm text-muted-foreground">Verborgen parels</div>
             </CardContent>

@@ -10,6 +10,16 @@ import { DublinCastlePage } from "./dublin-castle-page"
 import { NationalMuseumPage } from "./national-museum-page"
 import { KilmainhamGaolPage } from "./kilmainham-gaol-page"
 import { StPatricksCathedralPage } from "./st-patricks-cathedral-page"
+import { PhoenixParkPage } from "./phoenix-park-page"
+import { GraftonStreetPage } from "./grafton-street-page"
+import { ChristChurchCathedralPage } from "./christ-church-cathedral-page"
+import { TheSpirePage } from "./the-spire-page"
+import { JamesonDistilleryPage } from "./jameson-distillery-page"
+import { TheBrazenHeadPage } from "./the-brazen-head-page"
+import { DiscoverPage } from "./discover-page"
+import { ReisPage } from "./reis-page"
+import { AccomodatiePage } from "./accomodatie-page"
+import { PlanningPage } from "./planning-page"
 
 export function DashboardContent({ activeItem, onItemClick }: { 
   activeItem: string;
@@ -22,6 +32,10 @@ export function DashboardContent({ activeItem, onItemClick }: {
       return <FlightReturnPage />
     case "appartement":
       return <ApartmentPage />
+    case "reis":
+      return <ReisPage onItemClick={onItemClick} />
+    case "accomodatie":
+      return <AccomodatiePage onItemClick={onItemClick} />
     case "greyhound racing":
       return <GreyhoundRacingPage />
     case "guinness tour":
@@ -38,24 +52,22 @@ export function DashboardContent({ activeItem, onItemClick }: {
       return <KilmainhamGaolPage />
     case "st. patrick's cathedral":
       return <StPatricksCathedralPage />
+    case "phoenix park":
+      return <PhoenixParkPage />
+    case "grafton street":
+      return <GraftonStreetPage />
+    case "christ church cathedral":
+      return <ChristChurchCathedralPage />
+    case "the spire":
+      return <TheSpirePage />
+    case "jameson distillery":
+      return <JamesonDistilleryPage />
+    case "the brazen head":
+      return <TheBrazenHeadPage />
     case "planning":
-      return (
-        <div className="flex flex-col gap-4 p-6">
-          <h1 className="text-2xl font-bold">Planning</h1>
-          <div className="bg-muted/50 min-h-[50vh] rounded-xl flex items-center justify-center">
-            <p className="text-muted-foreground">Planning komt hier...</p>
-          </div>
-        </div>
-      )
+      return <PlanningPage onItemClick={onItemClick} />
     case "ontdek":
-      return (
-        <div className="flex flex-col gap-4 p-6">
-          <h1 className="text-2xl font-bold">Ontdek Dublin</h1>
-          <div className="bg-muted/50 min-h-[50vh] rounded-xl flex items-center justify-center">
-            <p className="text-muted-foreground">Ontdek opties komen hier...</p>
-          </div>
-        </div>
-      )
+      return <DiscoverPage onItemClick={onItemClick} />
     default:
       return <IntroPage onItemClick={onItemClick} />
   }

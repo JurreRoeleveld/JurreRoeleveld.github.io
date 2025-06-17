@@ -1,12 +1,4 @@
 import * as React from "react"
-import {
-  Send,
-  Plane,
-  Building,
-  Calendar,
-  Compass,
-} from "lucide-react"
-
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import {
@@ -17,90 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-
-const data = {
-  navMain: [
-    {
-      title: "Reis",
-      url: "#",
-      icon: Plane,
-      isActive: true,
-      items: [
-        {
-          title: "Heen",
-          url: "#",
-        },
-        {
-          title: "Terug",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Accomodatie",
-      url: "#",
-      icon: Building,
-      isActive: true,
-      items: [
-        {
-          title: "Appartement",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Planning",
-      url: "#",
-      icon: Calendar,
-      isActive: true,
-      items: [
-        {
-          title: "Greyhound Racing",
-          url: "#",
-        },
-        {
-          title: "Guinness Tour",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Ontdek",
-      url: "#",
-      icon: Compass,
-      isActive: true,
-      items: [
-        {
-          title: "Trinity College",
-          url: "#",
-        },
-        {
-          title: "Dublin Castle",
-          url: "#",
-        },
-        {
-          title: "National Museum",
-          url: "#",
-        },
-        {
-          title: "Kilmainham Gaol",
-          url: "#",
-        },
-        {
-          title: "St. Patrick's Cathedral",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
-    },
-  ],
-}
+import { navigationData } from "@/lib/navigation-data"
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
   activeItem?: string
@@ -128,8 +37,8 @@ export function AppSidebar({ activeItem, onItemClick, ...props }: AppSidebarProp
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} activeItem={activeItem} onItemClick={onItemClick} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" onItemClick={onItemClick} />
+        <NavMain items={navigationData.navMain} activeItem={activeItem} onItemClick={onItemClick} />
+        <NavSecondary items={navigationData.navSecondary} className="mt-auto" onItemClick={onItemClick} />
       </SidebarContent>
     </Sidebar>
   )

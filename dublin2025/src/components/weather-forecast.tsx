@@ -75,6 +75,9 @@ export function WeatherForecast() {
     fetchWeather()
   }, [])
 
+  const today = new Date();
+  const todayDateString = `${today.getDate()} Juni`;
+
   return (
     <Card>
       <CardHeader>
@@ -98,13 +101,13 @@ export function WeatherForecast() {
                 <div className="text-sm text-red-600">{error}</div>
             </div>
           ) : (
-            weatherData.map((day, index) => {
+            weatherData.map((day) => {
               const IconComponent = day.icon
               return (
                 <div 
                   key={day.date}
                   className={`text-center p-3 rounded-lg transition-colors h-40 flex flex-col justify-between ${
-                    index === 0 
+                    day.date === todayDateString
                       ? "bg-blue-50 border border-blue-200" 
                       : "bg-muted/30 hover:bg-muted/50"
                   }`}
@@ -149,7 +152,7 @@ export function WeatherForecast() {
         
         <div className="mt-4 pt-4 border-t text-center">
           <div className="text-sm text-muted-foreground mb-2">
-            💡 <strong>Tip:</strong> Neem een paraplu mee en kleed je in laagjes!
+            💡 <strong>Tip:</strong> Kijk ook gewoon eens uit het raam in plaats van op het scherm!
           </div>
           <div className="text-xs text-muted-foreground">
             Dublin's weer kan snel veranderen - typisch Iers weer! 🍀

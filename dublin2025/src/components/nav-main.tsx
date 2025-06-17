@@ -23,12 +23,14 @@ export function NavMain({
 }: {
   items: {
     title: string
+    id: string
     url: string
     icon: LucideIcon
     isActive?: boolean
     items?: {
       title: string
       url: string
+      id: string
     }[]
   }[]
   activeItem?: string
@@ -43,9 +45,7 @@ export function NavMain({
               <SidebarMenuButton 
                 tooltip={item.title}
                 onClick={() => {
-                  if (item.items && item.items.length > 0) {
-                    onItemClick?.(item.items[0].title.toLowerCase())
-                  }
+                  onItemClick?.(item.id)
                 }}
                 className={item.items && item.items.length > 0 ? "cursor-pointer" : ""}
               >
@@ -59,9 +59,9 @@ export function NavMain({
                       <SidebarMenuSubItem key={subItem.title}>
                         <SidebarMenuSubButton 
                           onClick={() => {
-                            onItemClick?.(subItem.title.toLowerCase())
+                            onItemClick?.(subItem.id)
                           }}
-                          className={`cursor-pointer ${activeItem === subItem.title.toLowerCase() ? "bg-sidebar-accent" : ""}`}
+                          className={`cursor-pointer ${activeItem === subItem.id ? "bg-sidebar-accent" : ""}`}
                         >
                           <span>{subItem.title}</span>
                         </SidebarMenuSubButton>

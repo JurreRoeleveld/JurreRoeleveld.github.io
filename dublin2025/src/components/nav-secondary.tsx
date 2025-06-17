@@ -18,6 +18,7 @@ export function NavSecondary({
     title: string
     url: string
     icon: LucideIcon
+    id: string
   }[]
   onItemClick?: (item: string) => void
   className?: string
@@ -27,7 +28,7 @@ export function NavSecondary({
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton tooltip={item.title} onClick={() => onItemClick?.(item.title.toLowerCase())}>
+            <SidebarMenuButton tooltip={item.title} onClick={() => onItemClick?.(item.id)}>
               <item.icon />
               <span>{item.title}</span>
             </SidebarMenuButton>
