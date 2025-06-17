@@ -35,8 +35,8 @@ export function ApartmentPage() {
         <CardContent className="space-y-4">
           {/* Address with Maps Link */}
           <div className="bg-white p-4 rounded-lg border border-blue-100">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex-1">
+            <div className="flex flex-col items-center gap-3">
+              <div className="text-center">
                 <h4 className="font-medium text-sm mb-1">📍 Adres</h4>
                 <p className="text-sm text-muted-foreground">
                   Fownes Street, Temple Bar<br />
@@ -52,7 +52,7 @@ export function ApartmentPage() {
                   className="text-xs"
                 >
                   <MapPin className="h-3 w-3 mr-1" />
-                  Open Kaarten
+                  Open Maps
                 </a>
               </Button>
             </div>

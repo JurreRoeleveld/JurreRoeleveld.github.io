@@ -15,16 +15,20 @@ import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar"
 import { DashboardContent } from "@/components/dashboard-content"
 
-export default function Page() {
+function PageContent() {
+  const { isMobile, setOpenMobile } = useSidebar()
   const [activeItem, setActiveItem] = useState("home")
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const handleItemClick = (item: string) => {
     setActiveItem(item)
-    setIsSidebarOpen(false) // Close sidebar on mobile
+    if (isMobile) {
+      // On mobile, this will close the sheet.
+      setOpenMobile(false) 
+    }
   }
 
   const getBreadcrumbTitle = () => {
@@ -39,10 +43,10 @@ export default function Page() {
   }
 
   return (
-    <SidebarProvider open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
+    <>
       <AppSidebar activeItem={activeItem} onItemClick={handleItemClick} />
-      <SidebarInset className="flex-1 overflow-hidden">
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b">
+      <div className="flex flex-1 flex-col">
+        <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 border-b bg-background">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator
@@ -52,7 +56,7 @@ export default function Page() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#" onClick={() => setActiveItem("home")}>
+                  <BreadcrumbLink href="#" onClick={() => handleItemClick("home")}>
                     Dublin 2025
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -64,10 +68,20 @@ export default function Page() {
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex-1 overflow-auto">
-          <DashboardContent activeItem={activeItem} />
-        </div>
-      </SidebarInset>
+        <main className="flex-1 overflow-auto">
+          <SidebarInset>
+            <DashboardContent activeItem={activeItem} />
+          </SidebarInset>
+        </main>
+      </div>
+    </>
+  )
+}
+
+export default function Page() {
+  return (
+    <SidebarProvider>
+      <PageContent />
     </SidebarProvider>
   )
 }

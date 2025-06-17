@@ -62,7 +62,16 @@ const data = {
       url: "#",
       icon: Calendar,
       isActive: true,
-      items: [],
+      items: [
+        {
+          title: "Greyhound Racing",
+          url: "#",
+        },
+        {
+          title: "Guinness Tour",
+          url: "#",
+        },
+      ],
     },
     {
       title: "Ontdek",

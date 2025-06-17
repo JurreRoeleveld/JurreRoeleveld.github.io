@@ -2,6 +2,8 @@ import { FlightPage } from "./flight-page"
 import { FlightReturnPage } from "./flight-return-page"
 import { IntroPage } from "./intro-page"
 import { ApartmentPage } from "./apartment-page"
+import { GreyhoundRacingPage } from "./greyhound-racing-page"
+import { GuinnessTourPage } from "./guinness-tour-page"
 
 export function DashboardContent({ activeItem }: { 
   activeItem: string
@@ -14,6 +16,10 @@ export function DashboardContent({ activeItem }: {
       return <FlightReturnPage />
     case "appartement":
       return <ApartmentPage />
+    case "greyhound racing":
+      return <GreyhoundRacingPage />
+    case "guinness tour":
+      return <GuinnessTourPage />
     case "planning":
       return (
         <div className="flex flex-col gap-4 p-6">
