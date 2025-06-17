@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -13,13 +14,26 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { DashboardContent } from "@/components/dashboard-content"
 
 export default function Page() {
+  const [activeItem, setActiveItem] = useState("home")
+
+  const getBreadcrumbTitle = () => {
+    switch (activeItem) {
+      case "vlucht": return "Vlucht"
+      case "appartement": return "Appartement"
+      case "planning": return "Planning"
+      case "ontdek": return "Ontdek"
+      default: return "Overzicht"
+    }
+  }
+
   return (
     <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2">
+      <AppSidebar activeItem={activeItem} onItemClick={setActiveItem} />
+      <SidebarInset className="flex-1 overflow-hidden">
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator
@@ -29,25 +43,20 @@ export default function Page() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
-                    Building Your Application
+                  <BreadcrumbLink href="#" onClick={() => setActiveItem("home")}>
+                    Dublin 2025
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  <BreadcrumbPage>{getBreadcrumbTitle()}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-          </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+        <div className="flex-1 overflow-auto">
+          <DashboardContent activeItem={activeItem} />
         </div>
       </SidebarInset>
     </SidebarProvider>

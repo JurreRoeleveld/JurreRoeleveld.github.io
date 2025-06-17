@@ -21,6 +21,8 @@ import {
 
 export function NavMain({
   items,
+  activeItem,
+  onItemClick,
 }: {
   items: {
     title: string
@@ -32,6 +34,8 @@ export function NavMain({
       url: string
     }[]
   }[]
+  activeItem?: string
+  onItemClick?: (item: string) => void
 }) {
   return (
     <SidebarGroup>
@@ -40,11 +44,9 @@ export function NavMain({
         {items.map((item) => (
           <Collapsible key={item.title} asChild defaultOpen={item.isActive}>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip={item.title}>
-                <a href={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </a>
+              <SidebarMenuButton tooltip={item.title}>
+                <item.icon />
+                <span>{item.title}</span>
               </SidebarMenuButton>
               {item.items?.length ? (
                 <>
@@ -58,10 +60,11 @@ export function NavMain({
                     <SidebarMenuSub>
                       {item.items?.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild>
-                            <a href={subItem.url}>
-                              <span>{subItem.title}</span>
-                            </a>
+                          <SidebarMenuSubButton 
+                            onClick={() => onItemClick?.(subItem.title.toLowerCase())}
+                            className={activeItem === subItem.title.toLowerCase() ? "bg-sidebar-accent" : ""}
+                          >
+                            <span>{subItem.title}</span>
                           </SidebarMenuSubButton>
                         </SidebarMenuSubItem>
                       ))}
