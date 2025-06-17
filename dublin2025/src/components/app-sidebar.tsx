@@ -45,7 +45,12 @@ const data = {
       title: "Accomodatie",
       url: "#",
       icon: Building,
-      items: [],
+      items: [
+        {
+          title: "Appartement",
+          url: "#",
+        },
+      ],
     },
     {
       title: "Planning",
