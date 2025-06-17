@@ -1,6 +1,6 @@
 "use client"
 
-import { type LucideIcon } from "lucide-react"
+import type { ElementType } from "react"
 
 import {
   SidebarGroup,
@@ -17,7 +17,7 @@ export function NavSecondary({
   items: {
     title: string
     url: string
-    icon: LucideIcon
+    icon: ElementType
     id: string
   }[]
   onItemClick?: (item: string) => void
