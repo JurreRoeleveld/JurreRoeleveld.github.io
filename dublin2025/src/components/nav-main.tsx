@@ -1,6 +1,6 @@
 "use client"
 
-import { type LucideIcon } from "lucide-react"
+import type { ElementType } from "react"
 
 import {
   Collapsible,
@@ -25,7 +25,7 @@ export function NavMain({
     title: string
     id: string
     url: string
-    icon: LucideIcon
+    icon: ElementType
     isActive?: boolean
     items?: {
       title: string
@@ -40,14 +40,16 @@ export function NavMain({
     <SidebarGroup>
       <SidebarMenu>
         {items.map((item) => (
-          <Collapsible key={item.title} asChild open={item.items && item.items.length > 0}>
+          <Collapsible
+            key={item.title}
+            asChild
+            open={item.items && item.items.length > 0}
+          >
             <SidebarMenuItem>
-              <SidebarMenuButton 
+              <SidebarMenuButton
                 tooltip={item.title}
-                onClick={() => {
-                  onItemClick?.(item.id)
-                }}
-                className={item.items && item.items.length > 0 ? "cursor-pointer" : ""}
+                onClick={() => onItemClick?.(item.id)}
+                className="cursor-pointer"
               >
                 <item.icon />
                 <span>{item.title}</span>
@@ -57,11 +59,11 @@ export function NavMain({
                   <SidebarMenuSub>
                     {item.items?.map((subItem) => (
                       <SidebarMenuSubItem key={subItem.title}>
-                        <SidebarMenuSubButton 
-                          onClick={() => {
-                            onItemClick?.(subItem.id)
-                          }}
-                          className={`cursor-pointer ${activeItem === subItem.id ? "bg-sidebar-accent" : ""}`}
+                        <SidebarMenuSubButton
+                          onClick={() => onItemClick?.(subItem.id)}
+                          className={`cursor-pointer ${
+                            activeItem === subItem.id ? "bg-sidebar-accent" : ""
+                          }`}
                         >
                           <span>{subItem.title}</span>
                         </SidebarMenuSubButton>

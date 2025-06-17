@@ -12,7 +12,7 @@ import {
 
 const planningItems = [
   {
-    id: "guinness tour",
+    id: "guinness-tour",
     title: "Guinness Storehouse",
     description: "Ontdek de geschiedenis van Ierlands beroemdste bier.",
     icon: Beer,
@@ -20,7 +20,7 @@ const planningItems = [
     iconColor: "text-yellow-600",
   },
   {
-    id: "greyhound racing",
+    id: "greyhound-racing",
     title: "Windhondenrennen",
     description: "Ervaar een spannende avond bij de hondenraces.",
     icon: Dog,

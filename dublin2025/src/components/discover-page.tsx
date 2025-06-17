@@ -20,7 +20,7 @@ import {
 
 const discoverItems = [
   {
-    id: "trinity college",
+    id: "trinity-college",
     title: "Trinity College",
     description: "Bezoek de oudste universiteit van Ierland en bewonder het Book of Kells.",
     icon: BookOpen,
@@ -28,7 +28,7 @@ const discoverItems = [
     iconColor: "text-blue-600",
   },
   {
-    id: "dublin castle",
+    id: "dublin-castle",
     title: "Dublin Castle",
     description: "Verken het historische hart van de stad, de voormalige zetel van de macht.",
     icon: Castle,
@@ -36,7 +36,7 @@ const discoverItems = [
     iconColor: "text-red-600",
   },
   {
-    id: "national museum",
+    id: "national-museum",
     title: "National Museum",
     description: "Duik in de rijke archeologische schatten van Ierland, van Vikingen tot goud.",
     icon: Landmark,
@@ -44,7 +44,7 @@ const discoverItems = [
     iconColor: "text-green-600",
   },
   {
-    id: "kilmainham gaol",
+    id: "kilmainham-gaol",
     title: "Kilmainham Gaol",
     description: "Een reis door de turbulente geschiedenis van de Ierse onafhankelijkheid.",
     icon: Lock,
@@ -52,7 +52,7 @@ const discoverItems = [
     iconColor: "text-gray-700",
   },
   {
-    id: "st. patrick's cathedral",
+    id: "st-patricks-cathedral",
     title: "St. Patrick's Cathedral",
     description: "Bewonder de gotische architectuur van de nationale kathedraal van Ierland.",
     icon: Church,
@@ -60,7 +60,7 @@ const discoverItems = [
     iconColor: "text-purple-600",
   },
   {
-    id: "phoenix park",
+    id: "phoenix-park",
     title: "Phoenix Park",
     description: "Ontsnap aan de drukte in een van Europa's grootste ommuurde stadsparken.",
     icon: Palmtree,
@@ -68,7 +68,7 @@ const discoverItems = [
     iconColor: "text-green-600",
   },
   {
-    id: "grafton street",
+    id: "grafton-street",
     title: "Grafton Street",
     description: "Ervaar de levendige sfeer van Dublin's beroemdste winkelstraat.",
     icon: ShoppingBag,
@@ -76,7 +76,7 @@ const discoverItems = [
     iconColor: "text-yellow-600",
   },
   {
-    id: "christ church cathedral",
+    id: "christ-church-cathedral",
     title: "Christ Church Cathedral",
     description: "Ontdek een van de oudste gebouwen van Dublin met prachtige architectuur.",
     icon: Church,
@@ -84,7 +84,7 @@ const discoverItems = [
     iconColor: "text-orange-600",
   },
   {
-    id: "the spire",
+    id: "the-spire",
     title: "The Spire",
     description: "Bewonder het 120 meter hoge Monument of Light in het hart van de stad.",
     icon: ArrowUp,
@@ -92,7 +92,7 @@ const discoverItems = [
     iconColor: "text-gray-600",
   },
   {
-    id: "jameson distillery",
+    id: "jameson-distillery",
     title: "Jameson Distillery",
     description: "Leer alles over het beroemde Ierse whiskeymerk en geniet van een proeverij.",
     icon: GlassWater,
@@ -100,7 +100,7 @@ const discoverItems = [
     iconColor: "text-amber-600",
   },
   {
-    id: "the brazen head",
+    id: "the-brazen-head",
     title: "The Brazen Head",
     description: "Drink een pint in de oudste pub van Ierland, daterend uit 1198.",
     icon: Beer,

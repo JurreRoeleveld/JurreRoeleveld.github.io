@@ -20,55 +20,40 @@ import { DiscoverPage } from "./discover-page"
 import { ReisPage } from "./reis-page"
 import { AccomodatiePage } from "./accomodatie-page"
 import { PlanningPage } from "./planning-page"
+import { Routes, Route } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
-export function DashboardContent({ activeItem, onItemClick }: { 
-  activeItem: string;
-  onItemClick: (item: string) => void;
-}) {
-  switch (activeItem) {
-    case "flight-page":
-      return <FlightPage />
-    case "flight-return-page":
-      return <FlightReturnPage />
-    case "appartement":
-      return <ApartmentPage />
-    case "reis":
-      return <ReisPage onItemClick={onItemClick} />
-    case "accomodatie":
-      return <AccomodatiePage onItemClick={onItemClick} />
-    case "greyhound racing":
-      return <GreyhoundRacingPage />
-    case "guinness tour":
-      return <GuinnessTourPage />
-    case "feedback":
-      return <FeedbackPage />
-    case "trinity college":
-      return <TrinityCollegePage />
-    case "dublin castle":
-      return <DublinCastlePage />
-    case "national museum":
-      return <NationalMuseumPage />
-    case "kilmainham gaol":
-      return <KilmainhamGaolPage />
-    case "st. patrick's cathedral":
-      return <StPatricksCathedralPage />
-    case "phoenix park":
-      return <PhoenixParkPage />
-    case "grafton street":
-      return <GraftonStreetPage />
-    case "christ church cathedral":
-      return <ChristChurchCathedralPage />
-    case "the spire":
-      return <TheSpirePage />
-    case "jameson distillery":
-      return <JamesonDistilleryPage />
-    case "the brazen head":
-      return <TheBrazenHeadPage />
-    case "planning":
-      return <PlanningPage onItemClick={onItemClick} />
-    case "ontdek":
-      return <DiscoverPage onItemClick={onItemClick} />
-    default:
-      return <IntroPage onItemClick={onItemClick} />
+export function DashboardContent() {
+  const navigate = useNavigate()
+
+  const handleItemClick = (item: string) => {
+    navigate(`/${item}`)
   }
+
+  return (
+    <Routes>
+      <Route path="/" element={<IntroPage onItemClick={handleItemClick} />} />
+      <Route path="/flight-page" element={<FlightPage />} />
+      <Route path="/flight-return-page" element={<FlightReturnPage />} />
+      <Route path="/appartement" element={<ApartmentPage />} />
+      <Route path="/reis" element={<ReisPage onItemClick={handleItemClick} />} />
+      <Route path="/accomodatie" element={<AccomodatiePage onItemClick={handleItemClick} />} />
+      <Route path="/greyhound-racing" element={<GreyhoundRacingPage />} />
+      <Route path="/guinness-tour" element={<GuinnessTourPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/trinity-college" element={<TrinityCollegePage />} />
+      <Route path="/dublin-castle" element={<DublinCastlePage />} />
+      <Route path="/national-museum" element={<NationalMuseumPage />} />
+      <Route path="/kilmainham-gaol" element={<KilmainhamGaolPage />} />
+      <Route path="/st-patricks-cathedral" element={<StPatricksCathedralPage />} />
+      <Route path="/phoenix-park" element={<PhoenixParkPage />} />
+      <Route path="/grafton-street" element={<GraftonStreetPage />} />
+      <Route path="/christ-church-cathedral" element={<ChristChurchCathedralPage />} />
+      <Route path="/the-spire" element={<TheSpirePage />} />
+      <Route path="/jameson-distillery" element={<JamesonDistilleryPage />} />
+      <Route path="/the-brazen-head" element={<TheBrazenHeadPage />} />
+      <Route path="/planning" element={<PlanningPage onItemClick={handleItemClick} />} />
+      <Route path="/ontdek" element={<DiscoverPage onItemClick={handleItemClick} />} />
+    </Routes>
+  )
 } 

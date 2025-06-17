@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect } from "react"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -20,16 +20,23 @@ import {
 import { DashboardContent } from "@/components/dashboard-content"
 import { navigationData } from "@/lib/navigation-data"
 import type { NavItem } from "@/lib/navigation-data"
+import { useNavigate, useLocation } from "react-router-dom"
 
 function PageContent() {
   const { isMobile, setOpenMobile } = useSidebar()
-  const [activeItem, setActiveItem] = useState("home")
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
+  const activeItem = location.pathname.substring(1) || "home"
 
   const handleItemClick = (item: string) => {
-    setActiveItem(item)
+    navigate(item === "home" ? "/" : `/${item}`)
     if (isMobile) {
-      // On mobile, this will close the sheet.
-      setOpenMobile(false) 
+      setOpenMobile(false)
     }
   }
 
@@ -55,20 +62,31 @@ function PageContent() {
         }
       }
     }
-    
+
     if (!parent && activeItem) {
-        const secondaryItem = navigationData.navSecondary.find(item => item.id === activeItem);
-        if (secondaryItem) {
-            parent = secondaryItem
-        }
+      const secondaryItem = navigationData.navSecondary.find(
+        item => item.id === activeItem,
+      )
+      if (secondaryItem) {
+        parent = secondaryItem
+      }
     }
 
     return (
       <>
+        <BreadcrumbItem className="hidden md:block">
+          <BreadcrumbLink href="#" onClick={() => handleItemClick("home")}>
+            Dublin 2025
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator className="hidden md:block" />
         {parent && (
           <>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#" onClick={() => handleItemClick(parent!.id)}>
+              <BreadcrumbLink
+                href="#"
+                onClick={() => handleItemClick(parent!.id)}
+              >
                 {parent.title}
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -80,7 +98,7 @@ function PageContent() {
             <BreadcrumbPage>{child.title}</BreadcrumbPage>
           </BreadcrumbItem>
         )}
-         {!child && parent &&(
+        {!child && parent && (
           <BreadcrumbItem>
             <BreadcrumbPage>{parent.title}</BreadcrumbPage>
           </BreadcrumbItem>
@@ -101,21 +119,13 @@ function PageContent() {
               className="mr-2 data-[orientation=vertical]:h-4"
             />
             <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#" onClick={() => handleItemClick("home")}>
-                    Dublin 2025
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                {getBreadcrumbItems()}
-              </BreadcrumbList>
+              <BreadcrumbList>{getBreadcrumbItems()}</BreadcrumbList>
             </Breadcrumb>
           </div>
         </header>
         <main className="flex-1 overflow-auto">
           <SidebarInset>
-            <DashboardContent activeItem={activeItem} onItemClick={handleItemClick} />
+            <DashboardContent />
           </SidebarInset>
         </main>
       </div>
