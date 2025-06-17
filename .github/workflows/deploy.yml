@@ -1,9 +1,11 @@
-name: Deploy to GitHub Pages
+name: Deploy Dublin2025 to GitHub Pages
 
 on:
   # Trigger on pushes to main branch
   push:
     branches: [ main ]
+    paths:
+      - 'dublin2025/**'  # Only trigger when dublin2025 folder changes
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,26 +40,25 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
+          cache-dependency-path: dublin2025/pnpm-lock.yaml
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: static
 
       - name: Install dependencies
+        working-directory: dublin2025
         run: pnpm install --frozen-lockfile
 
       - name: Build with Vite
+        working-directory: dublin2025
         run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./dublin2025/dist
 
   # Deployment job
   deploy:
@@ -69,4 +70,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 
