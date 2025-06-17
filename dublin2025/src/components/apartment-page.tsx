@@ -4,8 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
 export function ApartmentPage() {
-  // Mobile-friendly maps link
-  const mapsLink = "https://maps.apple.com/?q=Fownes+Street,+Temple+Bar,+Dublin,+Ireland"
+  const address = "Fownes Street, Temple Bar, Dublin, Ireland"
+  const encodedAddress = encodeURIComponent(address)
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`
 
   return (
     <div className="flex flex-col gap-6 p-4 max-w-4xl mx-auto">

@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
@@ -18,6 +20,12 @@ import { DashboardContent } from "@/components/dashboard-content"
 
 export default function Page() {
   const [activeItem, setActiveItem] = useState("home")
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const handleItemClick = (item: string) => {
+    setActiveItem(item)
+    setIsSidebarOpen(false) // Close sidebar on mobile
+  }
 
   const getBreadcrumbTitle = () => {
     switch (activeItem) {
@@ -31,8 +39,8 @@ export default function Page() {
   }
 
   return (
-    <SidebarProvider>
-      <AppSidebar activeItem={activeItem} onItemClick={setActiveItem} />
+    <SidebarProvider open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
+      <AppSidebar activeItem={activeItem} onItemClick={handleItemClick} />
       <SidebarInset className="flex-1 overflow-hidden">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b">
           <div className="flex items-center gap-2 px-4">
